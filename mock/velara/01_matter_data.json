@@ -1,0 +1,83 @@
+{
+  "client": {
+    "legal_name": "Velara Bioworks Private Limited",
+    "entity_type": "Private Limited Company",
+    "registered_address": "4th Floor, Ananta Towers, 87 Residency Road, Bangalore, 560025",
+    "primary_contact_name": "Rohan Kapoor",
+    "primary_contact_email": "rohan@velarabio.com",
+    "signatory_name": "Rohan Kapoor",
+    "signatory_designation": "Founder & CEO"
+  },
+  "matter_summary": "Cap table cleanup ahead of Series A: regularize a pending share allotment for which consideration was received in September 2025, structure exit for one angel via buyback, draft an ESOP plan, and optimize founder shareholding to maintain 60%+ combined promoter control post-ESOP.",
+  "phases": [
+    {
+      "name": "Phase I: Regularization of Pending Share Allotment",
+      "scope_summary": "Regularize allotment of shares against ₹45 lakhs received in September 2025 under the private placement framework, including PAS-3 filing.",
+      "scope_bullets": [
+        "Review of transaction structure and applicable provisions under the Companies Act, 2013",
+        "Structuring of allotment under the private placement framework",
+        "Drafting of Board Resolutions, allotment documentation, and share certificates",
+        "Filing of PAS-3 with the Registrar of Companies"
+      ],
+      "outcome_bullets": [
+        "Legally compliant and fully documented share allotment",
+        "Elimination of regulatory exposure arising from the delayed issuance"
+      ],
+      "tat_days": "3-5 working days",
+      "fee_inr": 8000
+    },
+    {
+      "name": "Phase II: Buyback Structuring (Mr. Desai's Exit)",
+      "scope_summary": "Structure buyback of shares held by Mr. Desai under Section 68 of the Companies Act, 2013, via the board approval route (within the 10% threshold).",
+      "scope_bullets": [
+        "Structuring buyback under Section 68 of the Companies Act, 2013, board approval route",
+        "Assessment of free reserves availability and confirmation of the 10% threshold compliance",
+        "Drafting of buyback offer documents and board resolutions",
+        "Regulatory compliance and statutory filings"
+      ],
+      "outcome_bullets": [
+        "Clean cash exit for Mr. Desai without dilution to remaining shareholders",
+        "Increase in promoter shareholding consistent with the founder optimization objective"
+      ],
+      "tat_days": "5-7 working days",
+      "fee_inr": 35000
+    },
+    {
+      "name": "Phase III: ESOP Plan & Implementation",
+      "scope_summary": "Draft a full 8% ESOP plan, Letter of Grant template, supporting board and shareholder resolutions, MGT-14 filing, and a tracking spreadsheet for grants, vesting, and exercise.",
+      "scope_bullets": [
+        "Drafting of ESOP plan covering eligibility, vesting, exercise price, plan administration, and treatment on termination",
+        "Letter of Grant template covering options, exercise price, vesting schedule, expiration, and other key terms",
+        "Drafting of board and shareholder resolutions for plan approval and grant of options",
+        "MGT-14 filing for the special resolution",
+        "Tracking spreadsheet for grant, vesting, and exercise"
+      ],
+      "outcome_bullets": [
+        "Investor-grade ESOP framework aligned with Series A diligence expectations",
+        "Operational tooling to administer grants and vesting on an ongoing basis"
+      ],
+      "tat_days": "10 working days",
+      "fee_inr": 25000
+    },
+    {
+      "name": "Phase IV: Founder Shareholding Optimization",
+      "scope_summary": "Cap table analysis and structuring to restore combined founder shareholding above 60% post-ESOP, by way of rights issue or selective participation as appropriate.",
+      "scope_bullets": [
+        "Cap table analysis (pre and post the above three phases) and modeling of post-ESOP dilution",
+        "Advisory on target shareholding thresholds and dilution planning for Series A",
+        "Structuring of rights issue (if required) and selective participation to rebalance holdings",
+        "Drafting of associated resolutions and filings"
+      ],
+      "outcome_bullets": [
+        "Strengthened promoter control above the 60% combined threshold",
+        "Improved governance posture for incoming Series A investors"
+      ],
+      "tat_days": "7-10 working days",
+      "fee_inr": 20000
+    }
+  ],
+  "total_fee_inr": 88000,
+  "payment_terms": "50% advance to commence work; balance due on delivery of each phase.",
+  "out_of_pocket_note": "Out-of-pocket expenses including government filing fees, stamp duty, and applicable taxes are excluded and will be charged at actuals.",
+  "deferred_or_separate": "Secondary share transfer for Ms. Iyer's exit will be quoted separately when the Series A investor is identified, as the structure depends on the incoming investor's terms (typical range ₹25,000–40,000)."
+}

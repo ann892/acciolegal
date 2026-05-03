@@ -1,0 +1,49 @@
+{
+  "client": {
+    "legal_name": "Niramai Health Analytix Private Limited",
+    "entity_type": "Private Limited Company",
+    "registered_address": "No. 142, 2nd Floor, EPIP Industrial Area, Whitefield, Bangalore 560066",
+    "primary_contact_name": "Dr. Geetha Manjunath",
+    "primary_contact_email": "geetha@niramai.com",
+    "signatory_name": "Dr. Geetha Manjunath",
+    "signatory_designation": "Founder & CEO"
+  },
+  "matter_summary": "Trademark protection of the 'NIRAMAI' wordmark and logo across Class 9 (medical software and screening device hardware) and Class 42 (SaaS, cloud-based AI services) — comprehensive search, clearance opinion, and TM-A filing.",
+  "phases": [
+    {
+      "name": "Phase I: Comprehensive Search & Clearance Opinion",
+      "scope_summary": "Pre-filing comprehensive trademark search across the IP India database covering Class 9 and Class 42 for both the wordmark and logo, followed by a written clearance opinion identifying any conflicting marks and recommended filing strategy.",
+      "scope_bullets": [
+        "Comprehensive search of the IP India trademark register for identical and deceptively similar marks across Class 9 and Class 42",
+        "Phonetic, visual, and conceptual similarity analysis for the 'NIRAMAI' wordmark and logo",
+        "Written clearance opinion with recommended filing strategy and identified risks"
+      ],
+      "outcome_bullets": [
+        "Clear go / no-go signal before filing fees are committed",
+        "Documented basis for filing strategy in case of future opposition"
+      ],
+      "tat_days": "2-3 working days",
+      "fee_inr": null
+    },
+    {
+      "name": "Phase II: TM-A Filing — Wordmark and Logo, Class 9 & Class 42",
+      "scope_summary": "TM-A filing for the 'NIRAMAI' wordmark and logo across Class 9 and Class 42, with monitoring of the application through to examination report.",
+      "scope_bullets": [
+        "Drafting and filing of TM-A applications: wordmark and logo, Class 9 and Class 42 (4 filings total)",
+        "Filing the day after sign-off on the search results",
+        "Monitoring of the application docket and acknowledgement of receipt of the application number",
+        "Ongoing tracking through examination (typical 6-8 month wait for examination report)"
+      ],
+      "outcome_bullets": [
+        "Application number(s) within five working days of engagement",
+        "Trademark applications on file across Class 9 and Class 42 for both marks"
+      ],
+      "tat_days": "Within 5 working days of engagement",
+      "fee_inr": 15000
+    }
+  ],
+  "total_fee_inr": 15000,
+  "payment_terms": "50% advance to commence work; balance on delivery (filing receipts).",
+  "out_of_pocket_note": "Government filing fees of INR 4,500 per class per mark (4,500 × 2 marks × 2 classes = INR 18,000) are payable directly to the IP India office and are excluded from the legal fee. Applicable taxes are also charged at actuals.",
+  "deferred_or_separate": "Response to examination objections, if any, will be quoted separately at the time (indicative range INR 8,000–12,000 per response depending on complexity)."
+}

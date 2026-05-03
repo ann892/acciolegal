@@ -1,0 +1,95 @@
+{
+  "title": "Proposal for Velara Bioworks Private Limited",
+  "opening_paragraph": "At Accio Legal, we understand that for a high-growth synthetic biology company such as Velara Bioworks — a Bangalore-based enzyme platform business now preparing for its Series A — a clean, compliant, and strategically aligned equity structure is non-negotiable. Pursuant to our recent discussions, we have identified four distinct workstreams in Velara's current shareholding framework that require execution before institutional diligence: a pending allotment that has not been formalized, an angel exit that needs cash settlement, an ESOP that needs to be put on a proper legal footing, and a founder shareholding position that needs to be restored above the 60% combined threshold post-ESOP.",
+  "approach_bullets": [
+    "Regularize the pending share allotment from September 2025 under the private placement framework",
+    "Structure a Section 68 buyback for Mr. Desai's clean cash exit",
+    "Draft and implement an 8% ESOP plan with full board and statutory backing",
+    "Optimize founder shareholding to maintain combined promoter control above 60% post-ESOP",
+    "Position the cap table to be diligence-ready for the upcoming Series A round"
+  ],
+  "scope_section_title": "Scope of Services — Cap Table Cleanup, ESOP Implementation & Founder Control Optimization",
+  "scope_section_intro": "We propose to undertake the following four-phase mandate, sequenced to address compliance gaps first, then exit and incentive structuring, and finally founder optimization in light of the resulting cap table.",
+  "phases": [
+    {
+      "name": "Phase I: Regularization of Pending Share Allotment",
+      "framing_sentence": "Accio Legal will ensure that the pending allotment of shares — for which ₹45 lakhs in consideration was received in September 2025 — is completed in compliance with applicable laws and the Registrar's filing requirements.",
+      "scope_bullets": [
+        "Review of transaction structure and applicable provisions under the Companies Act, 2013",
+        "Structuring of allotment under the private placement framework",
+        "Drafting of Board Resolutions, allotment documentation, and share certificates",
+        "Filing of PAS-3 with the Registrar of Companies"
+      ],
+      "outcome_bullets": [
+        "Legally compliant and fully documented share allotment",
+        "Elimination of regulatory exposure arising from the delayed issuance"
+      ]
+    },
+    {
+      "name": "Phase II: Buyback Structuring (Mr. Desai's Exit)",
+      "framing_sentence": "Accio Legal will structure a clean cash exit for Mr. Desai by way of a buyback under Section 68 of the Companies Act, 2013, executed via the board approval route given that the buyback falls within the 10% threshold.",
+      "scope_bullets": [
+        "Structuring buyback under Section 68 of the Companies Act, 2013, via the board approval route",
+        "Assessment of free reserves availability and confirmation of the 10% threshold compliance",
+        "Drafting of buyback offer documents and board resolutions",
+        "Regulatory compliance and statutory filings"
+      ],
+      "outcome_bullets": [
+        "Clean cash exit for Mr. Desai without dilution to remaining shareholders",
+        "Increase in promoter shareholding consistent with the founder optimization objective in Phase IV"
+      ]
+    },
+    {
+      "name": "Phase III: ESOP Plan & Implementation",
+      "framing_sentence": "Accio Legal will draft and put in place a comprehensive 8% ESOP plan covering the first cohort of approximately twelve grantees, with the legal architecture and operational tooling to scale further as Velara grows.",
+      "scope_bullets": [
+        "Drafting of ESOP plan covering eligibility, vesting, exercise price, plan administration, and treatment on termination",
+        "Letter of Grant template covering options granted, exercise price, vesting schedule, expiration, and other key terms",
+        "Drafting of board and shareholder resolutions for plan approval and grant of options",
+        "MGT-14 filing for the special resolution",
+        "Tracking spreadsheet for grant, vesting, and exercise"
+      ],
+      "outcome_bullets": [
+        "Investor-grade ESOP framework aligned with Series A diligence expectations",
+        "Operational tooling for ongoing grant administration and vesting tracking"
+      ]
+    },
+    {
+      "name": "Phase IV: Founder Shareholding Optimization",
+      "framing_sentence": "With the cap table cleaned up via Phases I–III, Accio Legal will analyze the resulting shareholding pattern and structure a path to restore combined founder holdings above the 60% threshold post-ESOP.",
+      "scope_bullets": [
+        "Cap table analysis (pre and post the above three phases) and modeling of post-ESOP dilution",
+        "Advisory on target shareholding thresholds and dilution planning for Series A",
+        "Structuring of rights issue (if required) and selective participation to rebalance founder holdings",
+        "Drafting of associated resolutions and filings"
+      ],
+      "outcome_bullets": [
+        "Strengthened promoter control above the 60% combined threshold",
+        "Improved governance posture for incoming Series A investors"
+      ]
+    }
+  ],
+  "deliverables": [
+    "Allotment compliance package — Board Resolution, allotment documentation, share certificates, PAS-3 filing",
+    "Buyback documentation — offer letter, board resolutions, and statutory filings under Section 68",
+    "ESOP plan, Letter of Grant template, board and shareholder resolutions, MGT-14 filing",
+    "ESOP grant, vesting, and exercise tracking spreadsheet",
+    "Pre- and post-restructuring cap table",
+    "Founder control strategy note and rights issue documentation (if required)",
+    "Final equity structure report — diligence-ready summary for Series A investors"
+  ],
+  "cost_table": [
+    {"service": "Phase I — Regularization of Pending Share Allotment", "tat": "3-5 working days", "fee_inr": 8000},
+    {"service": "Phase II — Buyback Structuring (Mr. Desai's Exit)", "tat": "5-7 working days", "fee_inr": 35000},
+    {"service": "Phase III — ESOP Plan & Implementation", "tat": "10 working days", "fee_inr": 25000},
+    {"service": "Phase IV — Founder Shareholding Optimization", "tat": "7-10 working days", "fee_inr": 20000}
+  ],
+  "exclusions_note": "Out-of-pocket expenses — government filing fees (including the MGT-14 and PAS-3 filings), stamp duty, and applicable taxes — are not included in the fees above and will be billed at actuals. Payment terms: 50% advance to commence work; balance due on delivery of each phase.",
+  "deferred_note": "Secondary share transfer for Ms. Iyer's exit will be quoted separately when the Series A investor is identified, as the structure depends on the incoming investor's terms. Indicative range: ₹25,000 to ₹40,000.",
+  "next_steps": [
+    "Project Confirmation — confirmation of acceptance taken over email",
+    "Engagement Agreement — sent across by Accio Legal",
+    "Work in Progress — group or email thread for communications and data gathering",
+    "Delivery — within timelines discussed on the call"
+  ]
+}

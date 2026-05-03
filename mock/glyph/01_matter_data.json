@@ -1,0 +1,54 @@
+{
+  "client": {
+    "legal_name": "Glyph Studios Private Limited",
+    "entity_type": "Private Limited Company",
+    "registered_address": "312, Sona Towers, MG Road, Mumbai 400001",
+    "primary_contact_name": "Aditya Bose",
+    "primary_contact_email": "aditya@glyphstudios.io",
+    "signatory_name": "Aditya Bose",
+    "signatory_designation": "Co-Founder",
+    "additional_parties": ["Priya Nair (Co-Founder)", "Karan (Co-Founder, 20% holder)"]
+  },
+  "matter_summary": "Three-founder agreement (vesting with back-credit for 14 months of operating tenure, IP assignment, decision-making, good- and bad-leaver, drag-along/tag-along) and a 12% ESOP plan and implementation for an animation studio preparing for a seed round.",
+  "phases": [
+    {
+      "name": "Phase I: Founders Agreement",
+      "scope_summary": "Three-founder agreement covering equity vesting (4-year schedule with 1-year cliff, back-credited for 14 months of tenure), IP assignment, decision-making thresholds, exit provisions (good-leaver/bad-leaver buyback), and drag-along/tag-along.",
+      "scope_bullets": [
+        "Drafting of a three-founder agreement modeling vesting for all three founders with back-credit for 14 months of existing tenure",
+        "IP assignment from each founder to the company (existing and going-forward)",
+        "Decision-making framework: simple majority for ordinary matters, unanimity for reserved matters (equity issuance, dilution, sale of assets)",
+        "Exit provisions including good-leaver and bad-leaver clauses with buyback at fair value or formula price",
+        "Drag-along and tag-along provisions to align with seed-round investor expectations",
+        "Up to two iterations of revisions based on founder inputs"
+      ],
+      "outcome_bullets": [
+        "Investor-grade founders agreement that addresses the seed-round red flag",
+        "Transparent and modeled vesting outcome for each founder under multiple departure scenarios"
+      ],
+      "tat_days": "10 working days (incl. revisions)",
+      "fee_inr": 30000
+    },
+    {
+      "name": "Phase II: ESOP Plan & Implementation",
+      "scope_summary": "12% ESOP plan covering the first cohort of 6–8 grantees, with the legal architecture and operational tooling to scale further as Glyph grows.",
+      "scope_bullets": [
+        "Drafting of ESOP plan covering eligibility, vesting, exercise price determination, plan administration, and treatment on termination",
+        "Letter of Grant template covering options granted, exercise price, vesting schedule, expiration, and other key terms",
+        "Drafting of board and shareholder resolutions for plan approval and grant of options",
+        "MGT-14 filing for the special resolution",
+        "Tracking spreadsheet for grant, vesting, and exercise"
+      ],
+      "outcome_bullets": [
+        "ESOP framework aligned with seed-round investor diligence expectations",
+        "Operational tooling for ongoing grant administration and vesting tracking"
+      ],
+      "tat_days": "10 working days (commences in parallel once Phase I is in revisions)",
+      "fee_inr": 35000
+    }
+  ],
+  "total_fee_inr": 65000,
+  "payment_terms": "50% advance to commence work; balance on delivery of each phase.",
+  "out_of_pocket_note": "Government filing fees (MGT-14 ~INR 600), stamp duty, and applicable taxes are excluded and charged at actuals.",
+  "deferred_or_separate": ""
+}

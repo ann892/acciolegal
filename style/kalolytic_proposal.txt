@@ -1,0 +1,204 @@
+PROPOSAL FOR KALOLYTIC — STYLE REFERENCE EXAMPLE
+================================================
+
+This is an example of a real Accio Legal proposal. Use it as a reference for
+voice, structure, depth, and the modular phase format. Pricing and scope below
+are specific to Kalolytic — every new proposal will have its own pricing and
+scope drawn from the call transcript, NOT from this example.
+
+================================================
+COVER / OPENING
+================================================
+
+Proposal for Kalolytic
+
+At Accio Legal, we understand that for a high-growth company such as Kalolytic,
+maintaining a clean, compliant, and strategically aligned equity structure is
+critical for operational stability, founder control, and future fundraising.
+
+Pursuant to our recent discussions, we have identified certain structural,
+compliance, and transactional gaps in the Company's current shareholding
+framework, which require immediate attention and execution.
+
+This proposal outlines our end-to-end legal approach to:
+- Regularize pending share allotments
+- Facilitate exit of identified shareholders
+- Optimize founder shareholding and control
+- Align the capital structure with upcoming ESOP and fundraising plans
+
+================================================
+SCOPE OF SERVICES — MODULAR PHASE FORMAT
+================================================
+
+We propose to undertake a comprehensive equity restructuring and compliance
+mandate, covering the following key areas:
+
+---
+
+PHASE 1: Regularization of Pending Share Allotment
+
+Accio Legal will ensure that the pending allotment of shares (for which
+consideration has already been received) is completed in compliance with
+applicable laws.
+
+Scope of Work:
+- Review of transaction structure and applicable provisions under the
+  Companies Act, 2013
+- Structuring of allotment under private placement framework
+- Drafting of:
+  - Board Resolutions
+  - Allotment documentation
+  - Issuance of share certificates
+- Filing of requisite forms (including PAS-3)
+
+Outcome:
+- Legally compliant and fully documented share allotment
+- Elimination of regulatory exposure arising from delayed issuance
+
+---
+
+PHASE 2: Exit Structuring of Existing Shareholders
+
+Accio Legal will facilitate the exit of identified shareholders in a legally
+compliant and tax-efficient manner, while protecting the Company's interests.
+
+A. Buyback of Shares (Subject to Eligibility)
+- Structuring buyback under Section 68 of the Companies Act, 2013
+- Assessment of:
+  - Free reserves availability
+  - Buyback limits (including 10% threshold for Board approval route)
+- Drafting of:
+  - Buyback offer documents
+  - Board resolutions
+- Regulatory compliance and filings
+
+Strategic Impact:
+- Increase in promoter shareholding
+- Reduction in external shareholding without dilution
+
+OR
+
+B. Secondary Share Transfer (Alternative Mechanism)
+- Structuring transfer to incoming investors / identified parties
+- Drafting and execution of:
+  - Share Transfer Deeds
+  - Board approvals
+- Advisory on:
+  - Pricing structure (including split consideration models)
+  - Capital gains tax implications
+
+Strategic Impact:
+- Facilitates smooth exit
+- Optimizes tax exposure for stakeholders
+
+---
+
+PHASE 3: Founder Shareholding Optimization
+
+Accio Legal will restore and maintain desired promoter control thresholds.
+
+Scope of Work:
+- Cap table analysis and restructuring strategy
+- Advisory on target shareholding thresholds and dilution planning
+- Structuring of Rights Issue (if required) and selective participation to
+  rebalance holdings
+
+Outcome:
+- Strengthened promoter control
+- Improved governance positioning for future investors
+
+---
+
+PHASE 4: Integration with Future Capital Raise
+
+Accio Legal will ensure that the revised equity structure is investor-ready
+and scalable.
+
+Scope of Work:
+- Alignment of cap table with proposed fundraising
+- Advisory on valuation-linked issuance
+- Drafting support for Rights Issue / further issuance and investor entry
+  structuring
+
+Outcome:
+- Clean and diligence-ready equity structure
+- Seamless transition into next funding round
+
+================================================
+ESOP MODULE (when relevant)
+================================================
+
+Accio Legal specializes in crafting comprehensive legal documentation for ESOP
+plans tailored for startups and businesses. With extensive global experience,
+we have collaborated with over 400 businesses and successfully formulated more
+than 50 ESOPs and other employee incentive schemes.
+
+Services covered:
+1. Drafting of ESOP plan — eligibility criteria, shares available, vesting
+   schedules, exercise price, plan administration, termination treatment
+2. Letter of Grant — number of options, exercise price, vesting, expiration,
+   other terms
+3. Board and Shareholder resolutions for plan and grant approval
+4. MGT-14 filing for the special resolution
+5. Tracking spreadsheet for grant, vesting, and exercise
+
+================================================
+DELIVERABLES (typical pattern)
+================================================
+
+- Complete allotment compliance package
+- Buyback / share transfer documentation
+- Updated cap table (pre & post restructuring)
+- Founder control strategy note
+- ESOP policy and implementation documents
+- Compliance filings and statutory updates
+- Final equity structure report
+
+================================================
+COST SUMMARY (Kalolytic example — pricing varies per client)
+================================================
+
+| Service                                  | Duration/TAT      | Pricing (INR) |
+|------------------------------------------|-------------------|---------------|
+| Phase I (Allotment Regularization)       | 3-5 working days  | 6,000         |
+| Phase II (Exit Structuring)              | 5-7 working days  | 30,000        |
+| Phase III-V (Restructuring & ESOP)       | 7-10 working days | 20,000        |
+
+Out-of-pocket expenses (government filing fees, stamp duty, applicable taxes)
+are charged at actuals and excluded from the above.
+
+================================================
+NEXT STEPS
+================================================
+
+1. Project Confirmation — Confirmation of acceptance taken over email
+2. Engagement Agreement — sent across by Accio Legal
+3. Work in Progress — group or email thread for communications and data
+4. Delivery — within timelines discussed on call
+
+================================================
+ABOUT ACCIO LEGAL — STANDARD CLOSING
+================================================
+
+Global Reach: Deep understanding of legal requirements in India & global markets.
+Cost-Effective: Focus on Growth, We Handle Legal.
+Dedicated Support: Round-the-Clock Legal Experts: By Your Side.
+Scalable Solutions: Grow Fearlessly: Legal Support that Adapts.
+
+Contact:
+hello@acciolegal.com | +91 91671 25177 | +91 82996 11658
+16, Gyanendra Kanan, Jagacha, GIP Colony, Howrah 711112
+
+================================================
+VOICE & STYLE NOTES (for the LLM, not for the client)
+================================================
+
+- Tone: confident, senior-counsel, strategic. Not salesy.
+- Open every proposal with a one-paragraph framing of WHY this matters for the
+  client's commercial position (growth, fundraising, control, compliance).
+- Each Phase block has the same structure: short framing sentence → "Scope of
+  Work" bulleted list → "Outcome" or "Strategic Impact" bullets.
+- Cite specific Indian statutes and forms by name (Companies Act 2013, Section
+  68, PAS-3, MGT-14, SH-7, etc.) — this is the firm's expertise signal.
+- Always mention out-of-pocket exclusion (gov fees, stamp duty, taxes).
+- Always close with the four next-steps and Accio's contact block.

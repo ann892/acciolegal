@@ -1,0 +1,67 @@
+[Otter.ai Transcript — Accio Legal first-call with Glyph Studios Pvt Ltd]
+[Date: 2026-04-10, Duration: 31 min, Speakers: Komal Shah (Accio Legal), Aditya Bose (Co-Founder, Glyph Studios), Priya Nair (Co-Founder, Glyph Studios)]
+
+Komal Shah  00:00
+Hi Aditya, hi Priya. Thanks for hopping on. So you mentioned in your email there's a founders agreement situation and an ESOP — let's start with the founders piece, what's going on?
+
+Aditya Bose  00:16
+Yeah, so we're three co-founders. Me, Priya, and our third co-founder Karan. We started Glyph Studios about 14 months ago — animation and motion design studio, mainly working with brands and a few OTT shows. We never put anything on paper between the three of us. Equity is verbally split 40-40-20 — me and Priya at 40 each, Karan at 20. Everything is fine right now but we're starting to talk to seed investors and they're flagging the lack of a founders agreement as a red flag.
+
+Komal Shah  01:05
+Yes, classic. So you want a proper founders agreement covering vesting, IP assignment, what happens if someone leaves, decision-making, all of that?
+
+Priya Nair  01:18
+Exactly. And we need it to feel fair, not like one founder is being protected over the others.
+
+Komal Shah  01:26
+Understood. The founders agreement we'll structure will have — equity vesting on a four-year schedule with one-year cliff for all three of you, even though you've been operating for 14 months. We'll back-credit your existing tenure so you don't restart from zero. IP assignment from each of you to the company for everything you've created so far and going forward. Decision-making — usually we structure it as simple majority for ordinary matters and unanimity for reserved matters like equity issuance, dilution, sale of assets. Exit provisions — what happens if Karan or anyone wants to leave, we'll do good-leaver and bad-leaver clauses with a buyback at fair value or formula price. Drag-along, tag-along — those go in too because investors will ask for them at the seed round anyway.
+
+Aditya Bose  02:31
+Okay. Karan was a bit nervous about the vesting because he's at 20% — does that mean he's stuck for four more years?
+
+Komal Shah  02:43
+No — vesting just means the equity vests over time, but he's already credited 14 months. So if he stays the full four years, he keeps all 20%. If he leaves after, say, two years, he keeps the proportional vested amount. We'll model it for all three of you so it's transparent.
+
+Aditya Bose  03:08
+Got it. And how long does the founders agreement piece take?
+
+Komal Shah  03:15
+Five to seven working days for the first draft. Then a round of revisions based on your inputs — usually one or two iterations — that adds maybe three more days. So call it ten working days total. Fee is 30,000 rupees.
+
+Aditya Bose  03:38
+Okay. And the ESOP?
+
+Komal Shah  03:42
+What's the size of the pool and who are you granting to?
+
+Priya Nair  03:46
+We were thinking 12 percent pool. First grant we're looking at maybe 6 to 8 employees — our lead animator, two illustrators, the studio manager, and our two senior motion designers.
+
+Komal Shah  04:04
+Okay, 12% is on the higher side but not unusual for a creative studio where talent is the asset. We'll draft you a full ESOP plan — eligibility, vesting, exercise price determination, plan administration, what happens on termination. Plus the Letter of Grant template, the board and shareholder resolutions, MGT-14 filing, and a tracking spreadsheet for grants and vesting. That's the standard package — 10 working days, 35,000 rupees. Government filing fee for MGT-14 is separate, that's around 600 rupees, very minor.
+
+Priya Nair  04:48
+Can both pieces happen in parallel?
+
+Komal Shah  04:52
+The founders agreement should come first because the ESOP plan needs to reference the post-founders-agreement cap table. So we sequence them — founders agreement first, ESOP starts the moment we're in revisions on the founders piece. Net total time from start to both delivered is about three weeks.
+
+Aditya Bose  05:18
+Total fee is 30,000 plus 35,000, so 65,000?
+
+Komal Shah  05:23
+Plus government fees and applicable taxes, yes. 50% advance to start, balance on delivery of each phase.
+
+Aditya Bose  05:31
+Send me a proposal. We'll loop in Karan and confirm by Monday.
+
+Komal Shah  05:36
+Couple of things I need — full registered name of Glyph Studios, registered office, and who's signing the engagement letter from your side.
+
+Aditya Bose  05:46
+Glyph Studios Private Limited. Registered office is 312, Sona Towers, MG Road, Mumbai 400001. I'll be the signatory. My email is aditya@glyphstudios.io.
+
+Komal Shah  06:02
+Got it, Aditya. Proposal across by tomorrow. Looking forward to working with you and the team.
+
+[Call ends]

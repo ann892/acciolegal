@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>{{ title }} — Accio Legal</title>
+<style>
+{{ css | safe }}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="page cover">
+  <div class="cover-mark">
+    <div class="circle-mark">
+      <span>AL</span>
+    </div>
+  </div>
+  <div class="cover-firm">ACCIO LEGAL</div>
+  <h1 class="cover-title">{{ title }}</h1>
+  <div class="cover-rule"></div>
+  <p class="cover-lede">{{ opening_paragraph }}</p>
+
+  <div class="cover-bullets">
+    <div class="cover-bullets-label">This proposal outlines our end-to-end legal approach to:</div>
+    <ul>
+      {% for b in approach_bullets %}<li>{{ b }}</li>{% endfor %}
+    </ul>
+  </div>
+
+  <div class="cover-footer">
+    Confidential · Prepared by Accio Legal · {{ generated_date }}
+  </div>
+</section>
+
+<!-- SCOPE -->
+<section class="page">
+  <div class="page-header">
+    <span class="page-eyebrow">Scope</span>
+    <h2 class="section-title">{{ scope_section_title }}</h2>
+    <p class="section-intro">{{ scope_section_intro }}</p>
+  </div>
+
+  {% for phase in phases %}
+  <div class="phase">
+    <div class="phase-num">{{ loop.index }}</div>
+    <div class="phase-body">
+      <h3 class="phase-name">{{ phase.name }}</h3>
+      <p class="phase-frame">{{ phase.framing_sentence }}</p>
+
+      {% if phase.scope_bullets %}
+      <div class="block-label">Scope of Work</div>
+      <ul class="phase-bullets">
+        {% for b in phase.scope_bullets %}<li>{{ b }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if phase.outcome_bullets %}
+      <div class="block-label outcome-label">Outcome</div>
+      <ul class="phase-bullets outcome-bullets">
+        {% for b in phase.outcome_bullets %}<li>{{ b }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<!-- DELIVERABLES + COST -->
+<section class="page">
+  <div class="page-header">
+    <span class="page-eyebrow">Deliverables &amp; Cost</span>
+    <h2 class="section-title">What you receive · What you invest</h2>
+  </div>
+
+  <div class="deliverables">
+    <div class="block-label">Deliverables</div>
+    <ul class="deliverables-list">
+      {% for d in deliverables %}<li>{{ d }}</li>{% endfor %}
+    </ul>
+  </div>
+
+  <div class="cost">
+    <div class="block-label">Summary of Costs</div>
+    <table class="cost-table">
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Duration / TAT</th>
+          <th>Pricing (INR)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in cost_table %}
+        <tr>
+          <td>{{ row.service }}</td>
+          <td>{{ row.tat }}</td>
+          <td class="amt">{% if row.fee_inr %}₹{{ '{:,}'.format(row.fee_inr) }}{% else %}TBD{% endif %}</td>
+        </tr>
+        {% endfor %}
+        {% if total_fee_inr %}
+        <tr class="total-row">
+          <td>Total</td>
+          <td></td>
+          <td class="amt">₹{{ '{:,}'.format(total_fee_inr) }}</td>
+        </tr>
+        {% endif %}
+      </tbody>
+    </table>
+
+    <p class="exclusions">{{ exclusions_note }}</p>
+    {% if deferred_note %}
+    <p class="deferred"><strong>Note:</strong> {{ deferred_note }}</p>
+    {% endif %}
+  </div>
+</section>
+
+<!-- NEXT STEPS + CONTACT -->
+<section class="page">
+  <div class="page-header">
+    <span class="page-eyebrow">Next Steps</span>
+    <h2 class="section-title">How we move forward</h2>
+  </div>
+
+  <ol class="next-steps">
+    {% for step in next_steps %}<li>{{ step }}</li>{% endfor %}
+  </ol>
+
+  <div class="contact-card">
+    <div class="contact-name">Komal Shah</div>
+    <div class="contact-role">Co-Founder &amp; CEO, Accio Legal</div>
+    <div class="contact-line">komal@acciolegal.com</div>
+    <div class="contact-line">+91 91671 25177  ·  +91 82996 11658</div>
+    <div class="contact-line">16, Gyanendra Kanan, Jagacha, GIP Colony, Howrah 711112</div>
+  </div>
+
+  <div class="footer-mark">ACCIO LEGAL</div>
+</section>
+
+</body>
+</html>

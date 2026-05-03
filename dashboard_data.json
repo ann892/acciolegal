@@ -1,0 +1,154 @@
+{
+  "firm": {
+    "name": "Accio Legal",
+    "tagline": "Matter Pipeline",
+    "owner": "Komal Shah, Co-Founder & CEO"
+  },
+  "matters": [
+    {
+      "id": "M-2026-0428-VELARA",
+      "client_name": "Velara Bioworks Private Limited",
+      "client_short": "Velara Bioworks",
+      "matter_type": "Cap Table Cleanup & ESOP",
+      "primary_contact": "Rohan Kapoor",
+      "primary_email": "rohan@velarabio.com",
+      "first_call_date": "2026-04-28",
+      "status": "EL Drafted",
+      "owner": "Komal Shah",
+      "total_fee_inr": 88000,
+      "phases": [
+        {"name": "Phase I — Allotment Regularization", "fee_inr": 8000, "tat": "3-5 days"},
+        {"name": "Phase II — Buyback (Section 68)", "fee_inr": 35000, "tat": "5-7 days"},
+        {"name": "Phase III — ESOP Plan", "fee_inr": 25000, "tat": "10 days"},
+        {"name": "Phase IV — Founder Optimization", "fee_inr": 20000, "tat": "7-10 days"}
+      ],
+      "summary": "Cap table cleanup ahead of Series A: regularize pending allotment, buyback for one angel exit, ESOP creation, founder shareholding optimization.",
+      "next_action": "Review EL draft in Gmail and send to client",
+      "proposal_path": "output/Velara_Proposal.docx",
+      "el_path": "output/Velara_Engagement_Letter.docx",
+      "deferred_note": "Secondary transfer for Ms. Iyer to be quoted separately at Series A"
+    },
+    {
+      "id": "M-2026-0425-PADMAJA",
+      "client_name": "Padmaja Textiles LLP",
+      "client_short": "Padmaja Textiles",
+      "matter_type": "Cross-Border SPA & FDI Compliance",
+      "primary_contact": "Vikram Padmaja",
+      "primary_email": "vikram@padmajatextiles.in",
+      "first_call_date": "2026-04-25",
+      "status": "Accepted — EL Pending",
+      "owner": "SM Mudassar N",
+      "total_fee_inr": 125000,
+      "phases": [
+        {"name": "Phase I — SPA Drafting & Negotiation", "fee_inr": 75000, "tat": "10-12 days"},
+        {"name": "Phase II — FDI / FEMA Compliance", "fee_inr": 30000, "tat": "5-7 days"},
+        {"name": "Phase III — Closing Documentation", "fee_inr": 20000, "tat": "5 days"}
+      ],
+      "summary": "Sale of 40% stake to Singapore-based strategic investor; full SPA, FEMA filings, and closing kit.",
+      "next_action": "Draft and send EL — client accepted Apr 30",
+      "proposal_path": null,
+      "el_path": null,
+      "deferred_note": ""
+    },
+    {
+      "id": "M-2026-0422-LUMIO",
+      "client_name": "Lumio Robotics Private Limited",
+      "client_short": "Lumio Robotics",
+      "matter_type": "ESOP Plan",
+      "primary_contact": "Anjali Mehrotra",
+      "primary_email": "anjali@lumiorobotics.com",
+      "first_call_date": "2026-04-22",
+      "status": "Proposal Sent",
+      "owner": "Malika Nigam",
+      "total_fee_inr": 35000,
+      "phases": [
+        {"name": "ESOP Plan & Implementation", "fee_inr": 35000, "tat": "10 days"}
+      ],
+      "summary": "Standalone 10% ESOP plan with Letter of Grant template, MGT-14, and tracking spreadsheet.",
+      "next_action": "Awaiting client response (sent Apr 24, follow up if no reply by May 5)",
+      "proposal_path": null,
+      "el_path": null,
+      "deferred_note": ""
+    },
+    {
+      "id": "M-2026-0418-NIRAMAI",
+      "client_name": "Niramai Health Analytix Pvt Ltd",
+      "client_short": "Niramai Health",
+      "matter_type": "Trademark Filing",
+      "primary_contact": "Geetha Manjunath",
+      "primary_email": "geetha@niramai.com",
+      "first_call_date": "2026-04-18",
+      "status": "Engaged",
+      "owner": "Abdullah Khalid",
+      "total_fee_inr": 15000,
+      "phases": [
+        {"name": "TM-A Filing — Class 9 & 42", "fee_inr": 15000, "tat": "5 days"}
+      ],
+      "summary": "Trademark filing for the 'NIRAMAI' wordmark and logo across Class 9 (medical software) and Class 42 (SaaS).",
+      "next_action": "Filing in progress — TM-A submission due May 5",
+      "proposal_path": null,
+      "el_path": null,
+      "deferred_note": ""
+    },
+    {
+      "id": "M-2026-0501-SAHAAY",
+      "client_name": "Sahaay Foundation",
+      "client_short": "Sahaay Foundation",
+      "matter_type": "Section 8 Conversion",
+      "primary_contact": "Ramesh Iyer",
+      "primary_email": "ramesh@sahaayfoundation.org",
+      "first_call_date": "2026-05-01",
+      "status": "Call Done",
+      "owner": "Komal Shah",
+      "total_fee_inr": null,
+      "phases": [],
+      "summary": "Conversion of existing Trust to a Section 8 company; pricing TBD pending review of trust deed and current asset base.",
+      "next_action": "Extraction in progress — proposal expected May 2",
+      "proposal_path": null,
+      "el_path": null,
+      "deferred_note": "Pricing to be finalized after review of trust deed"
+    },
+    {
+      "id": "M-2026-0410-GLYPH",
+      "client_name": "Glyph Studios Private Limited",
+      "client_short": "Glyph Studios",
+      "matter_type": "Founders Agreement + ESOP",
+      "primary_contact": "Aditya Bose",
+      "primary_email": "aditya@glyphstudios.io",
+      "first_call_date": "2026-04-10",
+      "status": "Engaged",
+      "owner": "Fatima Zohra Hasan",
+      "total_fee_inr": 65000,
+      "phases": [
+        {"name": "Founders Agreement", "fee_inr": 30000, "tat": "5-7 days"},
+        {"name": "ESOP Plan & Implementation", "fee_inr": 35000, "tat": "10 days"}
+      ],
+      "summary": "Three-founder agreement (vesting, IP assignment, deadlock) and 12% ESOP for an animation studio prepping for seed.",
+      "next_action": "Phase I drafting — first cut Apr 30",
+      "proposal_path": null,
+      "el_path": null,
+      "deferred_note": ""
+    },
+    {
+      "id": "M-2026-0327-BHARAT",
+      "client_name": "Bharat Aerospace Components Pvt Ltd",
+      "client_short": "Bharat Aerospace",
+      "matter_type": "Buyback Structuring",
+      "primary_contact": "Captain (Retd.) S. Iyer",
+      "primary_email": "siyer@bharataerospace.in",
+      "first_call_date": "2026-03-27",
+      "status": "Delivered",
+      "owner": "SM Mudassar N",
+      "total_fee_inr": 85000,
+      "phases": [
+        {"name": "Buyback Structuring (Section 68)", "fee_inr": 50000, "tat": "7 days"},
+        {"name": "Resolutions & Filings", "fee_inr": 35000, "tat": "5 days"}
+      ],
+      "summary": "Buyback of 8% from 3 minority shareholders ahead of strategic investment from PSU joint venture partner.",
+      "next_action": "Closed — final deliverables sent Apr 22",
+      "proposal_path": null,
+      "el_path": null,
+      "deferred_note": ""
+    }
+  ]
+}
