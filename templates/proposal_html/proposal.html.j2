@@ -9,12 +9,12 @@
 </head>
 <body>
 
-<!-- COVER -->
+<!-- =========================================================
+     COVER
+     ========================================================= -->
 <section class="page cover">
   <div class="cover-mark">
-    <div class="circle-mark">
-      <span>AL</span>
-    </div>
+    <div class="circle-mark"><span>AL</span></div>
   </div>
   <div class="cover-firm">ACCIO LEGAL</div>
   <h1 class="cover-title">{{ title }}</h1>
@@ -33,18 +33,20 @@
   </div>
 </section>
 
-<!-- SCOPE -->
-<section class="page">
+<!-- =========================================================
+     SCOPE — phases timeline
+     ========================================================= -->
+<section class="page section-deep">
   <div class="page-header">
     <span class="page-eyebrow">Scope</span>
     <h2 class="section-title">{{ scope_section_title }}</h2>
     <p class="section-intro">{{ scope_section_intro }}</p>
   </div>
 
-  {% for phase in phases %}
-  <div class="phase">
-    <div class="phase-num">{{ loop.index }}</div>
-    <div class="phase-body">
+  <div class="phases-timeline">
+    {% for phase in phases %}
+    <div class="phase">
+      <div class="phase-num">{{ loop.index }}</div>
       <h3 class="phase-name">{{ phase.name }}</h3>
       <p class="phase-frame">{{ phase.framing_sentence }}</p>
 
@@ -62,11 +64,13 @@
       </ul>
       {% endif %}
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </section>
 
-<!-- DELIVERABLES + COST -->
+<!-- =========================================================
+     DELIVERABLES + COST
+     ========================================================= -->
 <section class="page">
   <div class="page-header">
     <span class="page-eyebrow">Deliverables &amp; Cost</span>
@@ -80,7 +84,7 @@
     </ul>
   </div>
 
-  <div class="cost">
+  <div class="cost-section">
     <div class="block-label">Summary of Costs</div>
     <table class="cost-table">
       <thead>
@@ -115,8 +119,10 @@
   </div>
 </section>
 
-<!-- NEXT STEPS + CONTACT -->
-<section class="page">
+<!-- =========================================================
+     NEXT STEPS
+     ========================================================= -->
+<section class="page section-soft next-steps-section">
   <div class="page-header">
     <span class="page-eyebrow">Next Steps</span>
     <h2 class="section-title">How we move forward</h2>
@@ -125,16 +131,135 @@
   <ol class="next-steps">
     {% for step in next_steps %}<li>{{ step }}</li>{% endfor %}
   </ol>
+</section>
+
+<!-- =========================================================
+     ABOUT ACCIO + WHY
+     ========================================================= -->
+<section class="page section-deep">
+  <div class="page-header">
+    <span class="page-eyebrow">About</span>
+    <h2 class="section-title">About Accio Legal</h2>
+    <p class="section-intro">A startup-and-corporate-focused boutique with deep experience in Indian and global markets.</p>
+  </div>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon-text">●  GLOBAL</div>
+      <h4>Global Reach</h4>
+      <p>Deep understanding of legal requirements in India and global markets — across corporate, IP, and cross-border transactions.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon-text">●  EFFICIENT</div>
+      <h4>Cost-Effective</h4>
+      <p>Flat-fee, phase-based billing tailored for high-growth companies. You focus on growth, we handle the legal.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon-text">●  RESPONSIVE</div>
+      <h4>Dedicated Support</h4>
+      <p>A senior-led team and a partner-on-WhatsApp ethos — round-the-clock legal experts by your side.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon-text">●  SCALABLE</div>
+      <h4>Scalable Solutions</h4>
+      <p>Engagement structures and documentation that grow with you — from incorporation to Series A and beyond.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     OUR TEAM
+     ========================================================= -->
+<section class="page">
+  <div class="page-header">
+    <span class="page-eyebrow">Our Team</span>
+    <h2 class="section-title">The senior team on this matter</h2>
+    <p class="section-intro">A representative slice of the 14-person Accio bench across corporate, IP, and contracts.</p>
+  </div>
+
+  <div class="team-grid">
+    <div class="team-card"><div class="team-avatar">KS</div><div class="team-name">Komal Shah</div><div class="team-role">Co-Founder &amp; CEO</div></div>
+    <div class="team-card"><div class="team-avatar">SM</div><div class="team-name">SM Mudassar N</div><div class="team-role">Assistant Director</div></div>
+    <div class="team-card"><div class="team-avatar">MN</div><div class="team-name">Malika Nigam</div><div class="team-role">Senior Associate</div></div>
+    <div class="team-card"><div class="team-avatar">AK</div><div class="team-name">Abdullah Khalid</div><div class="team-role">Senior Associate</div></div>
+    <div class="team-card"><div class="team-avatar">FH</div><div class="team-name">Fatima Zohra Hasan</div><div class="team-role">Associate</div></div>
+    <div class="team-card"><div class="team-avatar">AK</div><div class="team-name">Amanpreet Kaur</div><div class="team-role">Associate</div></div>
+  </div>
+</section>
+
+<!-- =========================================================
+     TESTIMONIALS + CLIENTS
+     ========================================================= -->
+<section class="page section-soft">
+  <div class="page-header">
+    <span class="page-eyebrow">Track Record</span>
+    <h2 class="section-title">What clients say</h2>
+  </div>
+
+  <div class="testimonials-grid">
+    <div class="testimonial">
+      <p class="testimonial-quote">"I highly recommend Komal for her exceptional guidance in implementing our Phantom Stock Option (PSOP) scheme. She was quickly dispatched thanks to her insightful explanations, which effectively clarified the distinctions between employee stock options and phantom stock options."</p>
+      <div class="testimonial-attrib">Sebastian Schaffarczyk</div>
+      <div class="testimonial-org">AdStart Media</div>
+    </div>
+    <div class="testimonial">
+      <p class="testimonial-quote">"Komal helped me understand the implications of the ESOPs and to plan the grant and Vesting of ESOPs, particularly for our CXO. When I have questions about how these things work, Komal is always willing to get on a phone call with me and explain."</p>
+      <div class="testimonial-attrib">Chaitanya Salgalkar</div>
+      <div class="testimonial-org">Classboat</div>
+    </div>
+    <div class="testimonial">
+      <p class="testimonial-quote">"I had a great experience working with Komal and her team on our trademark filing with the Indian Trademark Registry. The entire process was handled smoothly and hassle-free, with everything completed in just one day."</p>
+      <div class="testimonial-attrib">Sagar Brahmbhatt</div>
+      <div class="testimonial-org">Saira Asia</div>
+    </div>
+    <div class="testimonial">
+      <p class="testimonial-quote">"We had an exceptional experience with Mrs Komal and team at Accio Legal. Their team provided expert legal advice, guided us through the entire process, and ensured a favourable outcome for my case."</p>
+      <div class="testimonial-attrib">Rishi Gupta</div>
+      <div class="testimonial-org">Mushin Innovation Labs</div>
+    </div>
+  </div>
+
+  <div class="clients-section">
+    <div class="block-label">Notable clients</div>
+    <div class="clients-list">
+      <div class="client-tag">AdStart Media</div>
+      <div class="client-tag">Stockyari</div>
+      <div class="client-tag">CheckMinistry</div>
+      <div class="client-tag">Sharang Shakti</div>
+      <div class="client-tag">Raffles Technologies</div>
+      <div class="client-tag">Mushin</div>
+      <div class="client-tag">Multiverz</div>
+      <div class="client-tag">Toolivilla</div>
+      <div class="client-tag">ExpertGate</div>
+      <div class="client-tag">dox2U</div>
+      <div class="client-tag">Classboat</div>
+      <div class="client-tag">Hubeco</div>
+      <div class="client-tag">Numocore</div>
+      <div class="client-tag">Krón</div>
+      <div class="client-tag">Saira Asia</div>
+      <div class="client-tag">… and more</div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
+<section class="page">
+  <div class="page-header">
+    <span class="page-eyebrow">Contact</span>
+    <h2 class="section-title">Let's begin</h2>
+  </div>
 
   <div class="contact-card">
     <div class="contact-name">Komal Shah</div>
     <div class="contact-role">Co-Founder &amp; CEO, Accio Legal</div>
     <div class="contact-line">komal@acciolegal.com</div>
     <div class="contact-line">+91 91671 25177  ·  +91 82996 11658</div>
-    <div class="contact-line">16, Gyanendra Kanan, Jagacha, GIP Colony, Howrah 711112</div>
+    <div class="contact-line">16, Gyanendra Kanan, Jagacha, GIP Colony, Howrah 711112, India</div>
   </div>
 
-  <div class="footer-mark">ACCIO LEGAL</div>
+  <div class="footer-mark">A C C I O  L E G A L</div>
 </section>
 
 </body>

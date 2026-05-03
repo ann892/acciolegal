@@ -32,19 +32,42 @@ GMAIL_SCOPES = [
 ]
 
 
+def _load_credentials():
+    """Load OAuth credentials from local file or Streamlit Cloud secrets.
+
+    Order of preference:
+      1. secrets/token.json on disk (local dev)
+      2. st.secrets["GMAIL_TOKEN_JSON"] (Streamlit Cloud / deployed)
+    """
+    import json
+
+    if TOKEN_PATH.exists():
+        return Credentials.from_authorized_user_file(str(TOKEN_PATH), GMAIL_SCOPES)
+
+    # Fallback: Streamlit Cloud secrets (only available when running under streamlit)
+    try:
+        import streamlit as st
+        token_str = st.secrets.get("GMAIL_TOKEN_JSON") if hasattr(st, "secrets") else None
+        if token_str:
+            return Credentials.from_authorized_user_info(json.loads(token_str), GMAIL_SCOPES)
+    except Exception:
+        pass
+
+    raise FileNotFoundError(
+        "No Gmail OAuth token found. Either:\n"
+        "  1. Run python3 setup_gmail_oauth.py to authenticate locally, or\n"
+        "  2. Use the Connect Gmail button in the dashboard's Settings page, or\n"
+        "  3. Set GMAIL_TOKEN_JSON in Streamlit Cloud secrets."
+    )
+
+
 def get_gmail_service():
     """Load saved OAuth credentials and return an authenticated Gmail service."""
-    if not TOKEN_PATH.exists():
-        raise FileNotFoundError(
-            f"No OAuth token at {TOKEN_PATH}. Run `python3 setup_gmail_oauth.py` first."
-        )
-
-    creds = Credentials.from_authorized_user_file(str(TOKEN_PATH), GMAIL_SCOPES)
-
+    creds = _load_credentials()
     if creds.expired and creds.refresh_token:
         creds.refresh(Request())
-        TOKEN_PATH.write_text(creds.to_json())
-
+        if TOKEN_PATH.exists():
+            TOKEN_PATH.write_text(creds.to_json())
     return build("gmail", "v1", credentials=creds)
 
 
