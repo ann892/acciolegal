@@ -5,9 +5,34 @@
 <title>{{ title }} — Accio Legal</title>
 <style>
 {{ css | safe }}
+
+/* Floating Save-as-PDF button — visible on screen, hidden when printing */
+.save-pdf-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: #C8A24B;
+  color: #07182B;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.save-pdf-btn:hover { background: #D4B266; }
+@media print { .save-pdf-btn { display: none !important; } }
 </style>
 </head>
 <body>
+
+<button class="save-pdf-btn" onclick="window.print()" title="Use 'Save as PDF' as the destination in the print dialog">
+  ⬇  Save as PDF
+</button>
 
 <!-- =========================================================
      COVER

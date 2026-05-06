@@ -436,7 +436,12 @@ def page_run_matter() -> None:
                     width="stretch",
                 )
 
-        st.caption("To save a PDF: download the HTML, open it in a browser, and use Cmd+P / Ctrl+P → Save as PDF.")
+        st.caption(
+            "To save a PDF: click the gold **Save as PDF** button at the "
+            "top-right of the preview below (uses your browser's print engine, "
+            "produces a high-fidelity PDF). Word .docx is also available for "
+            "manual editing."
+        )
 
         # Inline HTML preview
         components.html(st.session_state["proposal_html"], height=1100, scrolling=True)
