@@ -443,6 +443,59 @@ def page_run_matter() -> None:
             "manual editing."
         )
 
+        # ---- Send proposal to Gmail Drafts ----
+        st.markdown("###")
+        gmail_col1, gmail_col2 = st.columns([1, 2])
+        with gmail_col1:
+            send_to_gmail = st.button(
+                "✉  Send proposal to Gmail Drafts",
+                type="primary",
+                width="stretch",
+                key="send_proposal_btn",
+            )
+        with gmail_col2:
+            st.caption(
+                "Creates a draft in the connected Gmail account, addressed to "
+                "the client, with the proposal attached. You review in Gmail "
+                "Drafts and hit Send when ready."
+            )
+
+        if send_to_gmail:
+            from gmail_drafts import create_proposal_draft
+            from proposal_render import try_render_pdf
+
+            client_slug = scenario["client_slug"]
+            html = st.session_state["proposal_html"]
+            docx_path = st.session_state["proposal_docx_path"]
+
+            # Try PDF first; fall back to .docx if WeasyPrint isn't available
+            with st.spinner("Generating PDF (with .docx fallback if needed)..."):
+                pdf_path = OUTPUT_DIR / f"{client_slug}_Proposal.pdf"
+                pdf_result = try_render_pdf(html, pdf_path)
+                attachment_path = pdf_result if pdf_result else docx_path
+
+            with st.spinner(f"Creating Gmail draft with {attachment_path.suffix.upper().lstrip('.')} attached..."):
+                try:
+                    result = create_proposal_draft(
+                        to_email=client["primary_contact_email"],
+                        to_name=client["primary_contact_name"],
+                        client_legal_name=client["legal_name"],
+                        matter_summary=data.get("matter_summary", ""),
+                        attachment_path=attachment_path,
+                    )
+                    fmt_used = "PDF" if pdf_result else "Word .docx (PDF generation unavailable on this host)"
+                    st.success(
+                        f"✓ Draft created in Gmail with {fmt_used} attached. "
+                        f"[Open draft in Gmail →]({result['gmail_url']})"
+                    )
+                except FileNotFoundError:
+                    st.error(
+                        "Gmail not connected. Go to **Settings** in the sidebar "
+                        "and click **Connect Gmail** first."
+                    )
+                except Exception as e:
+                    st.error(f"Failed to create Gmail draft: {e}")
+
         # Inline HTML preview
         components.html(st.session_state["proposal_html"], height=1100, scrolling=True)
 
@@ -502,6 +555,56 @@ def page_run_matter() -> None:
                 "client party block, effective date, scope table, signatory, and address "
                 "fields are filled in. The clauses are unchanged."
             )
+
+            # ---- Send EL to Gmail Drafts ----
+            st.markdown("###")
+            el_gmail_col1, el_gmail_col2 = st.columns([1, 2])
+            with el_gmail_col1:
+                send_el_to_gmail = st.button(
+                    "✉  Send engagement letter to Gmail Drafts",
+                    type="primary",
+                    width="stretch",
+                    key="send_el_btn",
+                )
+            with el_gmail_col2:
+                st.caption(
+                    "Creates a Gmail draft addressed to the signatory with "
+                    "the engagement letter Word doc attached."
+                )
+
+            if send_el_to_gmail:
+                from gmail_drafts import create_engagement_letter_draft
+
+                signatory_email = (
+                    reply_data.get("confirmed_signatory_email")
+                    if reply_data.get("confirmed_signatory_email") not in (None, "MISSING", "")
+                    else data["client"].get("primary_contact_email")
+                )
+                signatory_name = (
+                    reply_data.get("confirmed_signatory_name")
+                    if reply_data.get("confirmed_signatory_name") not in (None, "MISSING", "")
+                    else data["client"].get("primary_contact_name")
+                )
+
+                with st.spinner("Creating Gmail draft for the engagement letter..."):
+                    try:
+                        result = create_engagement_letter_draft(
+                            to_email=signatory_email,
+                            to_name=signatory_name,
+                            client_legal_name=data["client"]["legal_name"],
+                            attachment_path=el_path,
+                        )
+                        st.success(
+                            f"✓ EL draft created in Gmail. "
+                            f"[Open draft in Gmail →]({result['gmail_url']})"
+                        )
+                    except FileNotFoundError:
+                        st.error(
+                            "Gmail not connected. Go to **Settings** in the sidebar "
+                            "and click **Connect Gmail** first."
+                        )
+                    except Exception as e:
+                        st.error(f"Failed to create Gmail draft: {e}")
 
     if st.button("Reset and start over"):
         for k in ("matter_data", "proposal_content", "proposal_html",

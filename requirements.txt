@@ -4,3 +4,5 @@ streamlit>=1.36.0
 google-auth>=2.30.0
 google-auth-oauthlib>=1.2.0
 google-api-python-client>=2.140.0
+jinja2>=3.1.0
+weasyprint>=62.0  # optional — falls back to .docx if system libs unavailable

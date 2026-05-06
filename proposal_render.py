@@ -51,3 +51,26 @@ def save_proposal_html(content: dict, out_path: Path) -> Path:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(render_proposal_html(content), encoding="utf-8")
     return out_path
+
+
+def try_render_pdf(html: str, out_path: Path) -> Path | None:
+    """Attempt to convert the proposal HTML to PDF via WeasyPrint.
+
+    Returns the output path on success, or None if WeasyPrint is not
+    available on the host (e.g., system libs missing on Render free tier).
+    Lazy-imports so the rest of the module loads even if WeasyPrint can't
+    be imported.
+    """
+    try:
+        from weasyprint import HTML
+    except Exception as e:
+        print(f"[proposal_render] WeasyPrint unavailable: {type(e).__name__}: {e}")
+        return None
+
+    try:
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        HTML(string=html).write_pdf(str(out_path))
+        return out_path
+    except Exception as e:
+        print(f"[proposal_render] PDF render failed: {type(e).__name__}: {e}")
+        return None
