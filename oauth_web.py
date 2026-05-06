@@ -38,10 +38,16 @@ def load_web_client_config() -> dict:
 
     Order of preference:
       1. secrets/credentials_web.json on disk (local dev)
-      2. st.secrets["GOOGLE_OAUTH_WEB_JSON"] (Streamlit Cloud / deployed)
+      2. GOOGLE_OAUTH_WEB_JSON env var (Render, Railway, custom hosts)
+      3. st.secrets["GOOGLE_OAUTH_WEB_JSON"] (Streamlit Cloud)
     """
+    import os
+
     if WEB_CREDENTIALS_PATH.exists():
         return json.loads(WEB_CREDENTIALS_PATH.read_text())
+
+    if os.environ.get("GOOGLE_OAUTH_WEB_JSON"):
+        return json.loads(os.environ["GOOGLE_OAUTH_WEB_JSON"])
 
     try:
         import streamlit as st
@@ -54,7 +60,7 @@ def load_web_client_config() -> dict:
     raise FileNotFoundError(
         f"Missing Web App OAuth credentials.\n"
         f"  Local: drop the JSON at {WEB_CREDENTIALS_PATH}\n"
-        f"  Cloud: set GOOGLE_OAUTH_WEB_JSON in Streamlit Cloud → Settings → Secrets\n"
+        f"  Cloud: set GOOGLE_OAUTH_WEB_JSON env var (Render) or Streamlit secret\n"
         f"  See GCP_WEB_OAUTH.md."
     )
 

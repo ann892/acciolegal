@@ -33,18 +33,24 @@ GMAIL_SCOPES = [
 
 
 def _load_credentials():
-    """Load OAuth credentials from local file or Streamlit Cloud secrets.
+    """Load OAuth credentials from local file, env var, or Streamlit secrets.
 
     Order of preference:
       1. secrets/token.json on disk (local dev)
-      2. st.secrets["GMAIL_TOKEN_JSON"] (Streamlit Cloud / deployed)
+      2. GMAIL_TOKEN_JSON env var (Render, Railway, custom hosts)
+      3. st.secrets["GMAIL_TOKEN_JSON"] (Streamlit Cloud)
     """
     import json
+    import os
 
     if TOKEN_PATH.exists():
         return Credentials.from_authorized_user_file(str(TOKEN_PATH), GMAIL_SCOPES)
 
-    # Fallback: Streamlit Cloud secrets (only available when running under streamlit)
+    if os.environ.get("GMAIL_TOKEN_JSON"):
+        return Credentials.from_authorized_user_info(
+            json.loads(os.environ["GMAIL_TOKEN_JSON"]), GMAIL_SCOPES
+        )
+
     try:
         import streamlit as st
         token_str = st.secrets.get("GMAIL_TOKEN_JSON") if hasattr(st, "secrets") else None
@@ -57,7 +63,7 @@ def _load_credentials():
         "No Gmail OAuth token found. Either:\n"
         "  1. Run python3 setup_gmail_oauth.py to authenticate locally, or\n"
         "  2. Use the Connect Gmail button in the dashboard's Settings page, or\n"
-        "  3. Set GMAIL_TOKEN_JSON in Streamlit Cloud secrets."
+        "  3. Set GMAIL_TOKEN_JSON as env var (Render) or Streamlit secret."
     )
 
 

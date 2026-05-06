@@ -513,10 +513,14 @@ def page_run_matter() -> None:
 def _detect_redirect_uri() -> str:
     """Best-effort: figure out the URL Streamlit is currently reachable at.
 
-    For local dev we assume http://localhost:8501/. On Streamlit Cloud the
-    user must set STREAMLIT_REDIRECT_URI in secrets to match the deployed URL
-    (e.g. https://accio-legal-demo.streamlit.app/).
+    Order of preference:
+      1. STREAMLIT_REDIRECT_URI env var (Render, Railway, custom hosts)
+      2. STREAMLIT_REDIRECT_URI Streamlit secret (Streamlit Cloud)
+      3. localhost (local dev)
     """
+    import os
+    if os.environ.get("STREAMLIT_REDIRECT_URI"):
+        return os.environ["STREAMLIT_REDIRECT_URI"]
     try:
         if hasattr(st, "secrets"):
             override = st.secrets.get("STREAMLIT_REDIRECT_URI")
