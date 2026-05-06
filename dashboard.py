@@ -614,12 +614,12 @@ def page_settings() -> None:
 
     st.markdown("###")
 
-    if not WEB_CREDENTIALS_PATH.exists():
-        st.error(
-            f"Web App OAuth client not configured. See `GCP_WEB_OAUTH.md` — "
-            f"you need to create a Web Application OAuth client in Google "
-            f"Cloud Console and save it as `{WEB_CREDENTIALS_PATH.name}`."
-        )
+    # Probe whether credentials are available from any source (file/env/secrets)
+    try:
+        from oauth_web import load_web_client_config
+        load_web_client_config()
+    except FileNotFoundError as e:
+        st.error(str(e))
         return
 
     # Build the authorize URL
