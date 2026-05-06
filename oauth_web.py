@@ -34,13 +34,29 @@ GMAIL_SCOPES = [
 
 
 def load_web_client_config() -> dict:
-    """Load the Web App OAuth client config (different from Desktop)."""
-    if not WEB_CREDENTIALS_PATH.exists():
-        raise FileNotFoundError(
-            f"Missing Web App OAuth credentials at {WEB_CREDENTIALS_PATH}.\n"
-            f"Follow GCP_WEB_OAUTH.md to create a Web Application OAuth client."
-        )
-    return json.loads(WEB_CREDENTIALS_PATH.read_text())
+    """Load the Web App OAuth client config.
+
+    Order of preference:
+      1. secrets/credentials_web.json on disk (local dev)
+      2. st.secrets["GOOGLE_OAUTH_WEB_JSON"] (Streamlit Cloud / deployed)
+    """
+    if WEB_CREDENTIALS_PATH.exists():
+        return json.loads(WEB_CREDENTIALS_PATH.read_text())
+
+    try:
+        import streamlit as st
+        cfg_str = st.secrets.get("GOOGLE_OAUTH_WEB_JSON") if hasattr(st, "secrets") else None
+        if cfg_str:
+            return json.loads(cfg_str)
+    except Exception:
+        pass
+
+    raise FileNotFoundError(
+        f"Missing Web App OAuth credentials.\n"
+        f"  Local: drop the JSON at {WEB_CREDENTIALS_PATH}\n"
+        f"  Cloud: set GOOGLE_OAUTH_WEB_JSON in Streamlit Cloud → Settings → Secrets\n"
+        f"  See GCP_WEB_OAUTH.md."
+    )
 
 
 def make_authorize_url(redirect_uri: str, state: str) -> str:
