@@ -71,13 +71,23 @@ def make_authorize_url(redirect_uri: str, state: str) -> str:
     The user clicks this URL, signs in with their Google account, grants the
     requested scopes, and Google redirects them back to `redirect_uri` with
     a one-time auth code in the query string.
+
+    PKCE is explicitly disabled because we cannot reliably persist the
+    code_verifier across the redirect (the Flow object is rebuilt fresh on
+    each request). For confidential clients (Web Application type with a
+    client_secret), PKCE is optional and Google accepts plain OAuth.
     """
     config = load_web_client_config()
-    flow = Flow.from_client_config(config, scopes=GMAIL_SCOPES, redirect_uri=redirect_uri)
+    flow = Flow.from_client_config(
+        config,
+        scopes=GMAIL_SCOPES,
+        redirect_uri=redirect_uri,
+        autogenerate_code_verifier=False,
+    )
+    flow.code_verifier = None
     auth_url, _ = flow.authorization_url(
         access_type="offline",
         prompt="consent",
-        include_granted_scopes="true",
         state=state,
     )
     return auth_url
@@ -91,7 +101,13 @@ def exchange_code_for_token(redirect_uri: str, code: str) -> dict:
     keep making API calls on the user's behalf indefinitely.
     """
     config = load_web_client_config()
-    flow = Flow.from_client_config(config, scopes=GMAIL_SCOPES, redirect_uri=redirect_uri)
+    flow = Flow.from_client_config(
+        config,
+        scopes=GMAIL_SCOPES,
+        redirect_uri=redirect_uri,
+        autogenerate_code_verifier=False,
+    )
+    flow.code_verifier = None
     flow.fetch_token(code=code)
     creds = flow.credentials
     return json.loads(creds.to_json())
