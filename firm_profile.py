@@ -2,30 +2,42 @@
 Firm profile — single source of truth for branding across the dashboard,
 proposal HTML, and engagement letter.
 
-For the public demo (sharable with prospects, posts, etc.) we use a
-fictional firm profile so we don't need permission from the real pilot
-client. To switch to a real firm profile (e.g., for a private deployment
-that creates drafts in that firm's actual Gmail), override the values
-below or read from environment variables.
+Loading order:
+  1. FIRM_PROFILE_JSON env var (full profile as JSON string) — wins if set
+  2. FIRM_PROFILE_FILE env var (path to a JSON file with the full profile)
+  3. Individual FIRM_* scalar overrides (FIRM_NAME, FIRM_FOUNDER, etc.)
+  4. Built-in fictional defaults (Verita Corporate Counsel)
+
+This lets the same codebase serve multiple firms from different deploys
+just by setting an env var per Render service:
+  • Real firm (e.g. Komal/Accio): set FIRM_PROFILE_JSON to her full profile
+  • Public fictional demo: leave env vars unset, defaults apply
 """
 
 from __future__ import annotations
-import os
 
-# Public demo defaults — fictional Indian corporate law firm.
-# Believable but does not match any real firm.
-FIRM = {
-    "name":           os.environ.get("FIRM_NAME",        "Verita Corporate Counsel"),
-    "short":          os.environ.get("FIRM_SHORT",       "Verita"),
-    "mark":           os.environ.get("FIRM_MARK",        "VC"),    # 2-letter logo
-    "tagline":        os.environ.get("FIRM_TAGLINE",     "Matter Pipeline"),
-    "founder_name":   os.environ.get("FIRM_FOUNDER",     "Anjali Mehta"),
-    "founder_role":   os.environ.get("FIRM_FOUNDER_ROLE","Managing Partner"),
-    "email":          os.environ.get("FIRM_EMAIL",       "anjali@veritacounsel.com"),
-    "support_email":  os.environ.get("FIRM_SUPPORT_EMAIL","hello@veritacounsel.com"),
-    "phone":          os.environ.get("FIRM_PHONE",       "+91 80 4022 1100"),
-    "phone_alt":      os.environ.get("FIRM_PHONE_ALT",   "+91 80 4022 1101"),
-    "address":        os.environ.get("FIRM_ADDRESS",     "Level 4, Prestige Polygon, Anna Salai, Chennai 600035, India"),
+import json
+import os
+from pathlib import Path
+
+ROOT = Path(__file__).parent
+
+# -----------------------------------------------------------------------------
+# Default fictional profile — used by the public demo deploy
+# -----------------------------------------------------------------------------
+
+DEFAULT_FIRM = {
+    "name":           "Verita Corporate Counsel",
+    "short":          "Verita",
+    "mark":           "VC",
+    "tagline":        "Matter Pipeline",
+    "founder_name":   "Anjali Mehta",
+    "founder_role":   "Managing Partner",
+    "email":          "anjali@veritacounsel.com",
+    "support_email":  "hello@veritacounsel.com",
+    "phone":          "+91 80 4022 1100",
+    "phone_alt":      "+91 80 4022 1101",
+    "address":        "Level 4, Prestige Polygon, Anna Salai, Chennai 600035, India",
     "team": [
         {"initials": "AM", "name": "Anjali Mehta",       "role": "Managing Partner"},
         {"initials": "RK", "name": "Rajat Kapoor",       "role": "Senior Counsel"},
@@ -57,7 +69,6 @@ FIRM = {
         },
     ],
     "notable_clients": [
-        # All fictional — generic enough to look like real but match no real firm
         "Northwind Bioworks", "Aspire Robotics", "Lumio Health",
         "Padmaja Industries", "Calyx Capital", "Kestrel Studios",
         "Vyana Therapeutics", "Halcyon Pictures", "Indra Cloud",
@@ -66,3 +77,50 @@ FIRM = {
         "… and more",
     ],
 }
+
+
+# -----------------------------------------------------------------------------
+# Loader
+# -----------------------------------------------------------------------------
+
+def _load_firm() -> dict:
+    """Resolve the firm profile from env, file, or defaults."""
+
+    # Highest priority: full profile as JSON string in env var
+    profile_json = os.environ.get("FIRM_PROFILE_JSON")
+    if profile_json:
+        try:
+            return json.loads(profile_json)
+        except Exception as e:
+            print(f"[firm_profile] FIRM_PROFILE_JSON failed to parse: {e}; falling back")
+
+    # Next: profile from a file path
+    profile_file = os.environ.get("FIRM_PROFILE_FILE")
+    if profile_file:
+        try:
+            return json.loads(Path(profile_file).read_text())
+        except Exception as e:
+            print(f"[firm_profile] FIRM_PROFILE_FILE failed to load: {e}; falling back")
+
+    # Otherwise: defaults, with optional individual scalar overrides
+    profile = dict(DEFAULT_FIRM)
+    overrides = {
+        "name":          os.environ.get("FIRM_NAME"),
+        "short":         os.environ.get("FIRM_SHORT"),
+        "mark":          os.environ.get("FIRM_MARK"),
+        "tagline":       os.environ.get("FIRM_TAGLINE"),
+        "founder_name":  os.environ.get("FIRM_FOUNDER"),
+        "founder_role":  os.environ.get("FIRM_FOUNDER_ROLE"),
+        "email":         os.environ.get("FIRM_EMAIL"),
+        "support_email": os.environ.get("FIRM_SUPPORT_EMAIL"),
+        "phone":         os.environ.get("FIRM_PHONE"),
+        "phone_alt":     os.environ.get("FIRM_PHONE_ALT"),
+        "address":       os.environ.get("FIRM_ADDRESS"),
+    }
+    for k, v in overrides.items():
+        if v is not None:
+            profile[k] = v
+    return profile
+
+
+FIRM = _load_firm()

@@ -1,0 +1,49 @@
+{
+  "name": "Accio Legal",
+  "short": "Accio",
+  "mark": "AL",
+  "tagline": "Matter Pipeline",
+  "founder_name": "Komal Shah",
+  "founder_role": "Co-Founder & CEO",
+  "email": "komal@acciolegal.com",
+  "support_email": "hello@acciolegal.com",
+  "phone": "+91 91671 25177",
+  "phone_alt": "+91 82996 11658",
+  "address": "16, Gyanendra Kanan, Jagacha, GIP Colony, Howrah 711112, India",
+  "team": [
+    {"initials": "KS", "name": "Komal Shah",         "role": "Co-Founder & CEO"},
+    {"initials": "SM", "name": "SM Mudassar N",      "role": "Assistant Director"},
+    {"initials": "MN", "name": "Malika Nigam",       "role": "Senior Associate"},
+    {"initials": "AK", "name": "Abdullah Khalid",    "role": "Senior Associate"},
+    {"initials": "FH", "name": "Fatima Zohra Hasan", "role": "Associate"},
+    {"initials": "AK", "name": "Amanpreet Kaur",     "role": "Associate"}
+  ],
+  "testimonials": [
+    {
+      "quote": "I highly recommend Komal for her exceptional guidance in implementing our Phantom Stock Option (PSOP) scheme. She quickly clarified the distinctions between employee stock options and phantom stock options, and walked us through the implications.",
+      "name": "Sebastian Schaffarczyk",
+      "org": "AdStart Media"
+    },
+    {
+      "quote": "Komal helped me understand the implications of ESOPs and plan the grant and vesting, particularly for our CXO. When I have questions about how these things work, Komal is always willing to get on a call and explain.",
+      "name": "Chaitanya Salgalkar",
+      "org": "Classboat"
+    },
+    {
+      "quote": "I had a great experience working with Komal and her team on our trademark filing with the Indian Trademark Registry. The entire process was handled smoothly, with everything completed in just one day.",
+      "name": "Sagar Brahmbhatt",
+      "org": "Saira Asia"
+    },
+    {
+      "quote": "We had an exceptional experience with Mrs Komal and team at Accio Legal. Their team provided expert legal advice, guided us through the entire process, and ensured a favourable outcome for my case.",
+      "name": "Rishi Gupta",
+      "org": "Mushin Innovation Labs"
+    }
+  ],
+  "notable_clients": [
+    "AdStart Media", "Stockyari", "CheckMinistry", "Sharang Shakti",
+    "Raffles Technologies", "Mushin", "Multiverz", "Toolivilla",
+    "ExpertGate", "dox2U", "Classboat", "Hubeco", "Numocore",
+    "Krón", "Saira Asia", "… and more"
+  ]
+}
