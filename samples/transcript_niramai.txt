@@ -1,52 +1,52 @@
-[Otter.ai Transcript — Accio Legal first-call with Niramai Health Analytix Pvt Ltd]
-[Date: 2026-04-18, Duration: 24 min, Speakers: Komal Shah (Accio Legal), Geetha Manjunath (Founder/CEO, Niramai)]
+[Otter.ai Transcript — Verita Corporate Counsel first-call with Lumen Health Diagnostics Pvt Ltd]
+[Date: 2026-04-18, Duration: 24 min, Speakers: Anjali Mehta (Verita Corporate Counsel), Sunita Rao (Founder/CEO, Lumen Health)]
 
-Komal Shah  00:00
-Hi Geetha, good to finally connect. I gather from your email you're looking to file trademarks. Tell me a bit about Niramai and what you want protected.
+Anjali Mehta  00:00
+Hi Sunita, good to finally connect. I gather from your email you're looking to file trademarks. Tell me a bit about Lumen Health and what you want protected.
 
-Geetha Manjunath  00:14
-Sure. Niramai Health Analytix is a Bangalore-based healthtech company, we make a non-contact, radiation-free breast cancer screening device. We've been around since 2017, AI-driven thermal imaging. We're scaling our enterprise sales now, and our brand is "NIRAMAI" — that's the wordmark we want protected, plus our logo. Right now we have nothing filed.
+Sunita Rao  00:14
+Sure. Lumen Health Diagnostics is a Bangalore-based healthtech company, we build an AI-powered cardiac monitoring platform for hospital ICUs. Founded in 2019, deployed in about thirty hospitals now. We're scaling our enterprise sales and our brand is "LUMEN HEALTH" — that's the wordmark we want protected, plus our logo. Right now we have nothing filed.
 
-Komal Shah  00:48
+Anjali Mehta  00:48
 Got it. And you want to protect the wordmark and the logo across what classes? Tell me what your product and services are exactly so I can recommend.
 
-Geetha Manjunath  01:01
-The core product is the medical screening device — that's a hardware plus software combination. The software is AI-based, runs on cloud. We also offer it as a SaaS service to hospitals and screening camps.
+Sunita Rao  01:01
+The core product is the cardiac monitoring platform — that's a software product running on bedside hardware in ICUs, plus a cloud SaaS for the analytics dashboard. So we have hardware-software combination on one side and a pure SaaS offering on the other.
 
-Komal Shah  01:22
+Anjali Mehta  01:22
 Right. So you're looking at Class 9 — that covers your software and the medical device hardware — and Class 42, which is your SaaS and the AI/cloud services. For a wordmark and logo across these two classes, that's a clean filing. We do these regularly. Quick question — have you done a preliminary trademark search to check no one else has filed something similar?
 
-Geetha Manjunath  01:55
+Sunita Rao  01:55
 We did a basic search on the IP India website, didn't find anything close. But I'd want you to do a proper one before we file.
 
-Komal Shah  02:08
+Anjali Mehta  02:08
 Yes, that's standard. We'll do a comprehensive search, then file. The timeline — search and clearance opinion is two to three days, and the actual TM-A filing is filed the day after we have your sign-off on the search results. So end-to-end, you'll have an application number within five working days.
 
-Geetha Manjunath  02:32
+Sunita Rao  02:32
 And the cost?
 
-Komal Shah  02:35
+Anjali Mehta  02:35
 For a wordmark plus logo, two classes, comprehensive search and filing — that's 15,000 rupees. That's our legal fee. The government filing fees are separate — those are 4,500 per class per mark, so two marks across two classes is 18,000 directly to the IP office. So total cash outflow is 33,000.
 
-Geetha Manjunath  03:04
+Sunita Rao  03:04
 And then?
 
-Komal Shah  03:06
+Anjali Mehta  03:06
 Then we monitor the application. Examination report typically comes in six to eight months. If there are no objections, the mark moves to publication, then registration. If there are objections, we draft and file the response — that's billed separately, usually around 8,000 to 12,000 per response depending on complexity. But that's a "later if needed" thing, not part of this engagement.
 
-Geetha Manjunath  03:38
-Okay. And signatory side, I'll sign — the company is Niramai Health Analytix Private Limited, registered in Bangalore.
+Sunita Rao  03:38
+Okay. And signatory side, I'll sign — the company is Lumen Health Diagnostics Private Limited, registered in Bangalore.
 
-Komal Shah  03:48
+Anjali Mehta  03:48
 Perfect. I'll need the registered address and your full name as it appears on company records for the engagement letter.
 
-Geetha Manjunath  03:56
-Niramai Health Analytix Private Limited, registered office is No. 142, 2nd Floor, EPIP Industrial Area, Whitefield, Bangalore 560066. I'm Dr. Geetha Manjunath, my email is geetha@niramai.com. I'll be the signatory.
+Sunita Rao  03:56
+Lumen Health Diagnostics Private Limited, registered office is Level 7, RMZ Ecospace, Outer Ring Road, Bellandur, Bangalore 560103. I'm Dr. Sunita Rao, my email is sunita@lumenhealth.in. I'll be the signatory.
 
-Komal Shah  04:21
+Anjali Mehta  04:21
 Great. I'll have a proposal across by tomorrow. Once you confirm and we get 50% advance, we'll start the search the same day.
 
-Geetha Manjunath  04:31
+Sunita Rao  04:31
 Sounds good. Look forward to it.
 
 [Call ends]

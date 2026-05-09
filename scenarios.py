@@ -26,13 +26,13 @@ SCENARIOS = {
         "mock_dir": ROOT / "mock" / "velara",
         "client_slug": "Velara",
     },
-    "niramai": {
-        "label": "Niramai Health — Trademark Filing",
+    "lumen": {
+        "label": "Lumen Health Diagnostics — Trademark Filing",
         "matter_type": "Trademark Filing",
         "transcript_path": ROOT / "samples" / "transcript_niramai.txt",
         "reply_path": ROOT / "samples" / "reply_niramai.txt",
         "mock_dir": ROOT / "mock" / "niramai",
-        "client_slug": "Niramai",
+        "client_slug": "LumenHealth",
     },
     "glyph": {
         "label": "Glyph Studios — Founders Agreement & ESOP",

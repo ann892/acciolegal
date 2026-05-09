@@ -14,6 +14,8 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from firm_profile import FIRM
+
 ROOT = Path(__file__).parent
 TEMPLATE_DIR = ROOT / "templates" / "proposal_html"
 
@@ -44,6 +46,7 @@ def render_proposal_html(content: dict) -> str:
         next_steps=content.get("next_steps", []),
         css=css,
         generated_date=date.today().strftime("%d %B %Y"),
+        firm=FIRM,
     )
 
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>{{ title }} — Accio Legal</title>
+<title>{{ title }} — {{ firm.name }}</title>
 <style>
 {{ css | safe }}
 
@@ -39,9 +39,9 @@
      ========================================================= -->
 <section class="page cover">
   <div class="cover-mark">
-    <div class="circle-mark"><span>AL</span></div>
+    <div class="circle-mark"><span>{{ firm.mark }}</span></div>
   </div>
-  <div class="cover-firm">ACCIO LEGAL</div>
+  <div class="cover-firm">{{ firm.name | upper }}</div>
   <h1 class="cover-title">{{ title }}</h1>
   <div class="cover-rule"></div>
   <p class="cover-lede">{{ opening_paragraph }}</p>
@@ -54,7 +54,7 @@
   </div>
 
   <div class="cover-footer">
-    Confidential · Prepared by Accio Legal · {{ generated_date }}
+    Confidential · Prepared by {{ firm.name }} · {{ generated_date }}
   </div>
 </section>
 
@@ -159,12 +159,12 @@
 </section>
 
 <!-- =========================================================
-     ABOUT ACCIO + WHY
+     ABOUT THE FIRM + WHY
      ========================================================= -->
 <section class="page section-deep">
   <div class="page-header">
     <span class="page-eyebrow">About</span>
-    <h2 class="section-title">About Accio Legal</h2>
+    <h2 class="section-title">About {{ firm.name }}</h2>
     <p class="section-intro">A startup-and-corporate-focused boutique with deep experience in Indian and global markets.</p>
   </div>
 
@@ -199,16 +199,13 @@
   <div class="page-header">
     <span class="page-eyebrow">Our Team</span>
     <h2 class="section-title">The senior team on this matter</h2>
-    <p class="section-intro">A representative slice of the 14-person Accio bench across corporate, IP, and contracts.</p>
+    <p class="section-intro">A representative slice of the firm's bench across corporate, IP, and contracts.</p>
   </div>
 
   <div class="team-grid">
-    <div class="team-card"><div class="team-avatar">KS</div><div class="team-name">Komal Shah</div><div class="team-role">Co-Founder &amp; CEO</div></div>
-    <div class="team-card"><div class="team-avatar">SM</div><div class="team-name">SM Mudassar N</div><div class="team-role">Assistant Director</div></div>
-    <div class="team-card"><div class="team-avatar">MN</div><div class="team-name">Malika Nigam</div><div class="team-role">Senior Associate</div></div>
-    <div class="team-card"><div class="team-avatar">AK</div><div class="team-name">Abdullah Khalid</div><div class="team-role">Senior Associate</div></div>
-    <div class="team-card"><div class="team-avatar">FH</div><div class="team-name">Fatima Zohra Hasan</div><div class="team-role">Associate</div></div>
-    <div class="team-card"><div class="team-avatar">AK</div><div class="team-name">Amanpreet Kaur</div><div class="team-role">Associate</div></div>
+    {% for member in firm.team %}
+    <div class="team-card"><div class="team-avatar">{{ member.initials }}</div><div class="team-name">{{ member.name }}</div><div class="team-role">{{ member.role }}</div></div>
+    {% endfor %}
   </div>
 </section>
 
@@ -222,47 +219,21 @@
   </div>
 
   <div class="testimonials-grid">
+    {% for t in firm.testimonials %}
     <div class="testimonial">
-      <p class="testimonial-quote">"I highly recommend Komal for her exceptional guidance in implementing our Phantom Stock Option (PSOP) scheme. She was quickly dispatched thanks to her insightful explanations, which effectively clarified the distinctions between employee stock options and phantom stock options."</p>
-      <div class="testimonial-attrib">Sebastian Schaffarczyk</div>
-      <div class="testimonial-org">AdStart Media</div>
+      <p class="testimonial-quote">"{{ t.quote }}"</p>
+      <div class="testimonial-attrib">{{ t.name }}</div>
+      <div class="testimonial-org">{{ t.org }}</div>
     </div>
-    <div class="testimonial">
-      <p class="testimonial-quote">"Komal helped me understand the implications of the ESOPs and to plan the grant and Vesting of ESOPs, particularly for our CXO. When I have questions about how these things work, Komal is always willing to get on a phone call with me and explain."</p>
-      <div class="testimonial-attrib">Chaitanya Salgalkar</div>
-      <div class="testimonial-org">Classboat</div>
-    </div>
-    <div class="testimonial">
-      <p class="testimonial-quote">"I had a great experience working with Komal and her team on our trademark filing with the Indian Trademark Registry. The entire process was handled smoothly and hassle-free, with everything completed in just one day."</p>
-      <div class="testimonial-attrib">Sagar Brahmbhatt</div>
-      <div class="testimonial-org">Saira Asia</div>
-    </div>
-    <div class="testimonial">
-      <p class="testimonial-quote">"We had an exceptional experience with Mrs Komal and team at Accio Legal. Their team provided expert legal advice, guided us through the entire process, and ensured a favourable outcome for my case."</p>
-      <div class="testimonial-attrib">Rishi Gupta</div>
-      <div class="testimonial-org">Mushin Innovation Labs</div>
-    </div>
+    {% endfor %}
   </div>
 
   <div class="clients-section">
     <div class="block-label">Notable clients</div>
     <div class="clients-list">
-      <div class="client-tag">AdStart Media</div>
-      <div class="client-tag">Stockyari</div>
-      <div class="client-tag">CheckMinistry</div>
-      <div class="client-tag">Sharang Shakti</div>
-      <div class="client-tag">Raffles Technologies</div>
-      <div class="client-tag">Mushin</div>
-      <div class="client-tag">Multiverz</div>
-      <div class="client-tag">Toolivilla</div>
-      <div class="client-tag">ExpertGate</div>
-      <div class="client-tag">dox2U</div>
-      <div class="client-tag">Classboat</div>
-      <div class="client-tag">Hubeco</div>
-      <div class="client-tag">Numocore</div>
-      <div class="client-tag">Krón</div>
-      <div class="client-tag">Saira Asia</div>
-      <div class="client-tag">… and more</div>
+      {% for c in firm.notable_clients %}
+      <div class="client-tag">{{ c }}</div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -277,14 +248,14 @@
   </div>
 
   <div class="contact-card">
-    <div class="contact-name">Komal Shah</div>
-    <div class="contact-role">Co-Founder &amp; CEO, Accio Legal</div>
-    <div class="contact-line">komal@acciolegal.com</div>
-    <div class="contact-line">+91 91671 25177  ·  +91 82996 11658</div>
-    <div class="contact-line">16, Gyanendra Kanan, Jagacha, GIP Colony, Howrah 711112, India</div>
+    <div class="contact-name">{{ firm.founder_name }}</div>
+    <div class="contact-role">{{ firm.founder_role }}, {{ firm.name }}</div>
+    <div class="contact-line">{{ firm.email }}</div>
+    <div class="contact-line">{{ firm.phone }}{% if firm.phone_alt %}  ·  {{ firm.phone_alt }}{% endif %}</div>
+    <div class="contact-line">{{ firm.address }}</div>
   </div>
 
-  <div class="footer-mark">A C C I O  L E G A L</div>
+  <div class="footer-mark">{{ firm.name | upper }}</div>
 </section>
 
 </body>

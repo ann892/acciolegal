@@ -1,15 +1,15 @@
 """
-Accio Legal — Proposal & Engagement Letter Pipeline (v1 demo)
+Proposal & Engagement Letter Pipeline (v1 demo)
 
 Flow:
   1. Read first-call transcript (Otter export)
   2. Claude extracts structured matter data — client, scope phases, pricing
-  3. Komal reviews extraction in terminal (the "checkpoint") and confirms or corrects
+  3. Founder reviews extraction in terminal (the "checkpoint") and confirms or corrects
   4. Claude drafts the full proposal narrative
-  5. Render proposal to .docx with Accio brand styling
+  5. Render proposal to .docx with the firm's brand styling
   6. Pause for client reply (sample acceptance email used in demo)
   7. Claude extracts any new info from the reply (signatory confirm, etc.)
-  8. Fill Komal's engagement letter .docx template
+  8. Fill the firm's engagement letter .docx template
   9. Save both files to output/
 
 Replace samples/transcript.txt and samples/client_reply.txt with real Otter
@@ -44,18 +44,20 @@ OUTPUT_DIR = ROOT / "output"
 
 MODEL = "claude-sonnet-4-6"
 ACCIO_NAVY = RGBColor(0x0E, 0x2A, 0x47)
-ACCIO_ADDRESS = (
-    "16, Gyanendra Kanan, Jagacha, GIP Colony, Howrah 711112, India"
-)
-ACCIO_EMAIL = "komal@acciolegal.com"
+
+# Firm-specific constants now sourced from firm_profile so this codebase can
+# serve any firm without code edits.
+from firm_profile import FIRM as _FIRM
+ACCIO_ADDRESS = _FIRM["address"]
+ACCIO_EMAIL = _FIRM["email"]
 ACCIO_FIRM_LINE = (
-    "Accio Legal, a partnership firm having its business address at "
-    "16 Gyanendra Kanan, Jagacha, GIP Colony, Howrah 711112, India"
+    f"{_FIRM['name']}, a partnership firm having its business address at "
+    f"{_FIRM['address']}"
 )
 
 # Cached system block — sent on every Claude call so we get cache hits across
 # the three-call sequence within the same matter.
-SYSTEM_BLOCK = """You are a senior associate at Accio Legal, a Delhi/Howrah-based corporate law firm led by Komal Shah. You draft proposals and engagement letters for Indian startup and corporate clients. You write in Komal's voice: confident, strategic, precise on Indian statutory references (Companies Act 2013, Section 68, PAS-3, MGT-14, SH-7, etc.). You never invent pricing or scope — those come from the call transcript only. You never invent client facts — if a field is missing from the transcript, mark it as MISSING rather than guessing."""
+SYSTEM_BLOCK = f"""You are a senior associate at {_FIRM['name']}, an Indian corporate law firm led by {_FIRM['founder_name']}. You draft proposals and engagement letters for Indian startup and corporate clients. You write in the firm's voice: confident, strategic, precise on Indian statutory references (Companies Act 2013, Section 68, PAS-3, MGT-14, SH-7, etc.). You never invent pricing or scope — those come from the call transcript only. You never invent client facts — if a field is missing from the transcript, mark it as MISSING rather than guessing."""
 
 # ---------------------------------------------------------------------------
 # Claude calls
@@ -391,9 +393,9 @@ def render_proposal_docx(content: dict, matter_data: dict, out_path: Path) -> No
     r = h.add_run("Contact")
     _set_run_font(r, size=12, bold=True, color=ACCIO_NAVY)
     for line in [
-        "Komal Shah — Co-Founder & CEO",
+        f"{_FIRM['founder_name']} — {_FIRM['founder_role']}",
         ACCIO_EMAIL,
-        "+91 91671 25177  |  +91 82996 11658",
+        f"{_FIRM['phone']}  |  {_FIRM['phone_alt']}",
         ACCIO_ADDRESS,
     ]:
         p = doc.add_paragraph()
@@ -461,6 +463,28 @@ def render_engagement_letter(
     )
     today = date.today().strftime("%dth %B %Y").replace("01th", "1st").replace("02th", "2nd").replace("03th", "3rd").replace("21th", "21st").replace("22th", "22nd").replace("23th", "23rd").replace("31th", "31st")
 
+    # 0. Rebrand the template's static text to current firm (overrides the
+    #    template's original Accio Legal references when running for a different firm)
+    _firm_replacements = {
+        "Accio Legal, a partnership firm having its business address at "
+        "16 Gyanendra Kanan, Jagacha, GIP Colony, Howrah 711112. India":
+            ACCIO_FIRM_LINE,
+        "Accio Legal":          _FIRM["name"],
+        "komal@acciolegal.com": _FIRM["email"],
+        "Komal Shah":           _FIRM["founder_name"],
+    }
+    for p in doc.paragraphs:
+        for old, new in _firm_replacements.items():
+            if old != new and old in p.text:
+                _replace_in_paragraph(p, old, new)
+    for tbl in doc.tables:
+        for row in tbl.rows:
+            for cell in row.cells:
+                for p in cell.paragraphs:
+                    for old, new in _firm_replacements.items():
+                        if old != new and old in p.text:
+                            _replace_in_paragraph(p, old, new)
+
     # 1. Replace effective date
     for p in doc.paragraphs:
         _replace_in_paragraph(p, "26th August 2025", today)
@@ -525,12 +549,13 @@ def render_engagement_letter(
     #     (the line break is a soft return inside a single paragraph)
     #   Pattern B (Table 2): "Name: " is its own paragraph
     # Each signature cell has the client block (empty "Name:") followed by the
-    # Accio block ("Name: Komal Shah") — we only fill the empty one.
+    # firm's already-filled signatory — we only fill the empty one.
+    firm_signatory = _FIRM["founder_name"]
     for table in doc.tables:
         for row in table.rows:
             for cell in row.cells:
                 for p in cell.paragraphs:
-                    if "Komal Shah" in p.text:
+                    if firm_signatory in p.text:
                         continue
                     if "Name: \nAuthorised Signatory" in p.text:
                         _replace_in_paragraph(
@@ -619,7 +644,7 @@ def main() -> None:
     scenario_key = _parse_scenario_arg()
     scenario = get_scenario(scenario_key)
 
-    print(f"\nAccio Legal — Proposal & EL Pipeline (demo)")
+    print(f"\n{_FIRM['name']} — Proposal & EL Pipeline (demo)")
     print(f"Scenario: {scenario['label']}")
     if mock_mode:
         print("[MOCK MODE — using pre-baked outputs, no API calls]\n")
@@ -656,7 +681,7 @@ def main() -> None:
         data = apply_corrections(client, data, corrections)
 
     # 3. Draft proposal
-    print("\n→ Drafting proposal in Komal's voice...")
+    print("\n→ Drafting proposal in the firm's voice...")
     if mock_mode:
         proposal_content = json.loads((mock_dir / "02_proposal_narrative.json").read_text())
     else:
@@ -694,7 +719,7 @@ def main() -> None:
 
     # 4. Pause for client reply
     print("\n" + "=" * 72)
-    print("Proposal is ready. Komal would now review it in Gmail Drafts and send.")
+    print("Proposal is ready. The founder would now review it in Gmail Drafts and send.")
     print("=" * 72)
     print(f"\nIn this demo we'll use the sample client reply at {reply_path}.")
     input("Press Enter to simulate the client's response and draft the engagement letter...")
@@ -711,19 +736,19 @@ def main() -> None:
 
     if reply_data["classification"] != "accept":
         print(f"\n  Reply was not a clean acceptance. Stopping before EL draft.")
-        print(f"  Komal would handle this manually (negotiation/clarification).")
+        print(f"  Founder would handle this manually (negotiation/clarification).")
         return
 
     if not reply_data.get("ready_to_send_el"):
         print(f"\n  Client raised questions:")
         for q in reply_data.get("client_questions", []):
             print(f"    • {q}")
-        print(f"  Komal would answer these before EL goes out.")
+        print(f"  Founder would answer these before EL goes out.")
         # For demo, proceed anyway to show the EL draft
         print(f"\n  (Demo: proceeding to draft EL anyway so you can see the output.)")
 
     # 6. Render engagement letter
-    print("\n→ Filling Komal's engagement letter template...")
+    print("\n→ Filling the firm's engagement letter template...")
     el_path = OUTPUT_DIR / f"{client_slug}_Engagement_Letter.docx"
     render_engagement_letter(EL_TEMPLATE_PATH, data, reply_data, el_path)
     print(f"  ✓ Engagement letter saved: {el_path}")
@@ -761,7 +786,7 @@ def main() -> None:
     print("=" * 72)
     print(f"\n  Proposal:           {proposal_path}")
     print(f"  Engagement letter:  {el_path}")
-    print("\nIn production, both files would land as Gmail drafts in Komal's account.")
+    print("\nIn production, both files would land as Gmail drafts in the founder's account.")
 
 
 if __name__ == "__main__":

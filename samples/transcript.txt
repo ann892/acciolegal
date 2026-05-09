@@ -1,88 +1,88 @@
-[Otter.ai Transcript — Accio Legal first-call with Velara Bioworks Pvt Ltd]
-[Date: 2026-04-28, Duration: 38 min, Speakers: Komal Shah (Accio Legal), Rohan Kapoor (Founder/CEO, Velara Bioworks)]
+[Otter.ai Transcript — Verita Corporate Counsel first-call with Velara Bioworks Pvt Ltd]
+[Date: 2026-04-28, Duration: 38 min, Speakers: Anjali Mehta (Verita Corporate Counsel), Rohan Kapoor (Founder/CEO, Velara Bioworks)]
 
-Komal Shah  00:00
+Anjali Mehta  00:00
 Hi Rohan, thanks for jumping on. Before we get into it, do you mind telling me a bit about Velara, where you are right now, and what's prompting this conversation?
 
 Rohan Kapoor  00:18
 Yeah, sure. So Velara Bioworks is a synthetic biology startup, we're building enzyme platforms for industrial use, mostly textiles and pharma right now. We're a private limited company incorporated in Bangalore in 2022. We just closed a small bridge round in February, around 1.4 crores, and we're now prepping for a proper Series A in roughly six months. The reason I'm reaching out — our cap table is a mess, honestly. We have two angels who want to exit, we issued some shares last September against money that came in but we never actually allotted them properly, and our ESOP pool is on a whiteboard somewhere. We need to clean all of this before we go to Series A investors because anyone who looks at our company will run.
 
-Komal Shah  01:34
+Anjali Mehta  01:34
 Okay, very common picture, don't worry. Let me make sure I understand. Three things, broadly. One, you have pending share allotments where consideration has been received but the allotment hasn't been done. Two, you have two existing shareholders, the angels, who want to exit. Three, you want to formalize the ESOP. Anything else on the list?
 
 Rohan Kapoor  02:02
 Yeah, one more. After all of this is done, we want to make sure the founder shareholding — me and my co-founder Priya — stays above 60 percent combined, post-ESOP. We've been getting diluted in random ways and we want to fix that.
 
-Komal Shah  02:19
+Anjali Mehta  02:19
 Right. So that's a fourth piece, founder shareholding optimization. Okay, let's go one by one. The pending allotment first. How much money came in, and when?
 
 Rohan Kapoor  02:32
 About 45 lakhs, came in September 2025, from one of our existing investors who was topping up. We received the money but our company secretary at the time didn't file PAS-3 or do the board resolution, and then she left.
 
-Komal Shah  02:51
+Anjali Mehta  02:51
 Okay. So we'll regularize that under the private placement framework — board resolution, allotment documentation, share certificates, and the PAS-3 filing. Standard package. We do a lot of these. It'll take three to five working days once you give us the data. The fee for that piece is going to be 8,000 rupees, plus actuals on government filings.
 
 Rohan Kapoor  03:18
 Got it.
 
-Komal Shah  03:20
+Anjali Mehta  03:20
 For the angel exits — both of them, are they exiting in cash, or are they being bought out by the incoming Series A investor, or by the company itself?
 
 Rohan Kapoor  03:34
 One of them, Mr. Desai, wants cash now, doesn't want to wait. The other one, Ms. Iyer, is fine being bought out at the Series A by the new investor. But we don't have a Series A investor confirmed yet. So I think for Mr. Desai we need to do a buyback, and Ms. Iyer we can just do a secondary transfer when the time comes.
 
-Komal Shah  04:02
+Anjali Mehta  04:02
 That makes sense. Look, for Mr. Desai, we'll structure it under Section 68 of the Companies Act, board approval route since you're well within the 10 percent threshold. We'll check your free reserves, draft the buyback offer, board resolutions, and handle the regulatory filings. For Ms. Iyer's secondary transfer, we'll prepare that whenever the Series A investor is identified — share transfer deed, board approvals, and we'll advise on capital gains exposure for her side too. Since the secondary transfer is contingent on the Series A, I'd suggest we keep that piece flexible and bill it separately when triggered. The buyback piece for Mr. Desai is firm. That'll be 35,000 rupees, five to seven working days from when we get your financials and cap table.
 
 Rohan Kapoor  05:08
 Okay, and the secondary transfer when it happens?
 
-Komal Shah  05:14
+Anjali Mehta  05:14
 We'll quote it then because the structure depends on the incoming investor's terms. Typically 25,000 to 40,000 range.
 
 Rohan Kapoor  05:23
 Fair.
 
-Komal Shah  05:26
+Anjali Mehta  05:26
 Now ESOP. How big a pool are you thinking, and how many employees are you planning to grant to in the first round?
 
 Rohan Kapoor  05:38
 We're thinking 8 percent pool to start. First grant probably to about 12 employees, but the plan should accommodate more.
 
-Komal Shah  05:50
+Anjali Mehta  05:50
 Right. We'll draft you a full ESOP plan — eligibility, vesting, exercise price, administration, termination treatment, all of it. We'll do the Letter of Grant template, the board and shareholder resolutions, MGT-14 filing for the special resolution, and a tracking spreadsheet for grants, vesting, and exercises. Turnaround on the full ESOP package is ten working days. The fee is 25,000 rupees.
 
 Rohan Kapoor  06:21
 That includes the MGT-14 filing fees?
 
-Komal Shah  06:25
+Anjali Mehta  06:25
 Filing fee itself is paid to MCA, that's a government charge, separate. Our 25,000 is the legal work. Government fees and any stamp duty are billed at actuals on top.
 
 Rohan Kapoor  06:38
 Got it.
 
-Komal Shah  06:41
+Anjali Mehta  06:41
 Last piece, the founder shareholding optimization. Once we're done with the allotment, the buyback, and the ESOP creation, we'll do a cap table analysis and tell you whether you need a rights issue or any other selective participation to get back above 60 percent combined for you and Priya. That's an advisory and structuring piece, comes after the first three. Seven to ten working days, fee is 20,000 rupees.
 
 Rohan Kapoor  07:14
 Okay so just so I have the total — 8 plus 35 plus 25 plus 20, that's 88,000 rupees, plus government fees on top.
 
-Komal Shah  07:26
+Anjali Mehta  07:26
 Plus applicable taxes, yes. We bill 50 percent advance to start work, balance on delivery of each phase. And the secondary transfer for Ms. Iyer, that's separate and we'll quote when the time comes. Out-of-pocket — government filings and stamp duty — at actuals.
 
 Rohan Kapoor  07:48
 Sounds reasonable. Send me a proposal and I'll loop in Priya.
 
-Komal Shah  07:54
+Anjali Mehta  07:54
 Perfect. Couple of things I need from you to finalize: full registered name of Velara Bioworks, the registered office address, and the name of whoever will sign the engagement letter on Velara's side — is that you?
 
 Rohan Kapoor  08:11
 Yeah, I'll sign. The full name is Velara Bioworks Private Limited. Registered office is 4th Floor, Ananta Towers, 87 Residency Road, Bangalore, 560025. My email is rohan@velarabio.com — that's the best one to send everything to.
 
-Komal Shah  08:34
+Anjali Mehta  08:34
 Got it, Rohan. I'll have a proposal across by tomorrow. We'll start the moment you confirm and we receive 50 percent advance.
 
 Rohan Kapoor  08:43
-Thanks Komal, looking forward to it.
+Thanks Anjali, looking forward to it.
 
 [Call ends]

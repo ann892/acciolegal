@@ -1,8 +1,8 @@
 {
   "firm": {
-    "name": "Accio Legal",
+    "name": "Verita Corporate Counsel",
     "tagline": "Matter Pipeline",
-    "owner": "Komal Shah, Co-Founder & CEO"
+    "owner": "Anjali Mehta, Managing Partner"
   },
   "matters": [
     {
@@ -14,7 +14,7 @@
       "primary_email": "rohan@velarabio.com",
       "first_call_date": "2026-04-28",
       "status": "EL Drafted",
-      "owner": "Komal Shah",
+      "owner": "Anjali Mehta",
       "total_fee_inr": 88000,
       "phases": [
         {"name": "Phase I — Allotment Regularization", "fee_inr": 8000, "tat": "3-5 days"},
@@ -37,7 +37,7 @@
       "primary_email": "vikram@padmajatextiles.in",
       "first_call_date": "2026-04-25",
       "status": "Accepted — EL Pending",
-      "owner": "SM Mudassar N",
+      "owner": "Rajat Kapoor",
       "total_fee_inr": 125000,
       "phases": [
         {"name": "Phase I — SPA Drafting & Negotiation", "fee_inr": 75000, "tat": "10-12 days"},
@@ -59,7 +59,7 @@
       "primary_email": "anjali@lumiorobotics.com",
       "first_call_date": "2026-04-22",
       "status": "Proposal Sent",
-      "owner": "Malika Nigam",
+      "owner": "Priya Nair",
       "total_fee_inr": 35000,
       "phases": [
         {"name": "ESOP Plan & Implementation", "fee_inr": 35000, "tat": "10 days"}
@@ -71,20 +71,20 @@
       "deferred_note": ""
     },
     {
-      "id": "M-2026-0418-NIRAMAI",
-      "client_name": "Niramai Health Analytix Pvt Ltd",
-      "client_short": "Niramai Health",
+      "id": "M-2026-0418-LUMEN",
+      "client_name": "Lumen Health Diagnostics Private Limited",
+      "client_short": "Lumen Health",
       "matter_type": "Trademark Filing",
-      "primary_contact": "Geetha Manjunath",
-      "primary_email": "geetha@niramai.com",
+      "primary_contact": "Sunita Rao",
+      "primary_email": "sunita@lumenhealth.in",
       "first_call_date": "2026-04-18",
       "status": "Engaged",
-      "owner": "Abdullah Khalid",
+      "owner": "Vikram Sundaram",
       "total_fee_inr": 15000,
       "phases": [
         {"name": "TM-A Filing — Class 9 & 42", "fee_inr": 15000, "tat": "5 days"}
       ],
-      "summary": "Trademark filing for the 'NIRAMAI' wordmark and logo across Class 9 (medical software) and Class 42 (SaaS).",
+      "summary": "Trademark filing for the 'LUMEN HEALTH' wordmark and logo across Class 9 (cardiac monitoring software) and Class 42 (SaaS).",
       "next_action": "Filing in progress — TM-A submission due May 5",
       "proposal_path": null,
       "el_path": null,
@@ -99,7 +99,7 @@
       "primary_email": "ramesh@sahaayfoundation.org",
       "first_call_date": "2026-05-01",
       "status": "Call Done",
-      "owner": "Komal Shah",
+      "owner": "Anjali Mehta",
       "total_fee_inr": null,
       "phases": [],
       "summary": "Conversion of existing Trust to a Section 8 company; pricing TBD pending review of trust deed and current asset base.",
@@ -117,7 +117,7 @@
       "primary_email": "aditya@glyphstudios.io",
       "first_call_date": "2026-04-10",
       "status": "Engaged",
-      "owner": "Fatima Zohra Hasan",
+      "owner": "Sneha Iyer",
       "total_fee_inr": 65000,
       "phases": [
         {"name": "Founders Agreement", "fee_inr": 30000, "tat": "5-7 days"},
@@ -138,7 +138,7 @@
       "primary_email": "siyer@bharataerospace.in",
       "first_call_date": "2026-03-27",
       "status": "Delivered",
-      "owner": "SM Mudassar N",
+      "owner": "Rajat Kapoor",
       "total_fee_inr": 85000,
       "phases": [
         {"name": "Buyback Structuring (Section 68)", "fee_inr": 50000, "tat": "7 days"},
